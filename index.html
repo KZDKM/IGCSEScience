@@ -1,654 +1,2178 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>Sci</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
-.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
-@media print {
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Sci</title>
 
 
-.CodeMirror { height: auto; }
-.CodeMirror.cm-s-inner { background: inherit; }
-.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
-.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
-.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
-.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
-.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
-.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
-.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
-.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
-.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
-.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
-.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
-.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
-.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
-.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
-.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
-.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
-.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
-.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
-.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
-.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
-.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
-.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
-.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
-.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
-.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
-.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
-.cm-negative { color: rgb(221, 68, 68); }
-.cm-positive { color: rgb(34, 153, 34); }
-.cm-header, .cm-strong { font-weight: 700; }
-.cm-del { text-decoration: line-through; }
-.cm-em { font-style: italic; }
-.cm-link { text-decoration: underline; }
-.cm-error { color: red; }
-.cm-invalidchar { color: red; }
-.cm-constant { color: rgb(38, 139, 210); }
-.cm-defined { color: rgb(181, 137, 0); }
-div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
-div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
-.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
-.CodeMirror { position: relative; overflow: hidden; }
-.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
-.CodeMirror-sizer { position: relative; }
-.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
-.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
-.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
-.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
-.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
-.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
-.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
-.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
-.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
-.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
-.CodeMirror-lines { cursor: text; }
-.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
-.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
-.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
-.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
-.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
-.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
-.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
-.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
-.CodeMirror-measure pre { position: static; }
-.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
-.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
-.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
-.cm-searching { background: rgba(255, 255, 0, 0.4); }
-@media print {
-  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
-}
-
-
-:root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
-}
-
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
-    font-size: 16px;
-}
-
+<style type="text/css">
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
-}
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
 
-#write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
-}
-
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
-}
-
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
-}
-
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
-}
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
 
 a {
-    color: #4183C4;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
 h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
+  font-size: 28px;
+  color: black; }
+
 h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-}
-
-/*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
-    }
-
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
-    }
-}*/
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
 
 h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
+  font-size: 18px; }
+
 h4 {
-    font-size: 1.25em;
-}
+  font-size: 16px; }
+
 h5 {
-    font-size: 1em;
-}
+  font-size: 14px; }
+
 h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
-}
-li>ol,
-li>ul {
-    margin: 0 0;
-}
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
 hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
 }
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
 
 li p.first {
-    display: inline-block;
-}
-ul,
-ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
-}
-table {
-    padding: 0;
-    word-break: initial;
-}
-table tr {
-    border-top: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
-}
-table th {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
     font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
-}
-table td {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 6px 13px;
-}
-table th:first-child,
-table td:first-child {
-    margin-top: 0;
-}
-table th:last-child,
-table td:last-child {
-    margin-bottom: 0;
-}
-
-.CodeMirror-lines {
-    padding-left: 4px;
-}
-
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
-}
-
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
+    font-style: italic;
     padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
 }
 
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
 }
 
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
+* {
+	-webkit-print-color-adjust: exact;
 }
-
-
-.md-task-list-item > input {
-  margin-left: -1.3em;
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
 }
-
 @media print {
-    html {
-        font-size: 13px;
-    }
-    table,
-    pre {
-        page-break-inside: avoid;
-    }
-    pre {
-        word-wrap: break-word;
-    }
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
 }
-
-.md-fences {
-	background-color: #f8f8f8;
-}
-#write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-}
-
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
-
-.md-mathjax-midline {
-    background: #fafafa;
-}
-
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
-}
-
-.md-tag {
-    color: #a7a7a7;
-    opacity: 1;
-}
-
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
-}
-
-.sidebar-tabs {
-    border-bottom: none;
-}
-
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-}
-
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
-}
-
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-}
-
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
-
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
-}
-
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
-}
-
-.md-lang {
-    color: #b4654d;
-}
-
-.html-for-mac .context-menu {
-    --item-hover-bg-color: #E6F0FE;
-}
-
-#md-notification .btn {
-    border: 0;
-}
-
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-}
-
-.ty-preferences .window-content {
-    background-color: #fafafa;
-}
-
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
-}
-
-
 </style>
+
+<style type="text/css">
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+<style type="text/css">
+div.prism-show-language {
+	position: relative;
+}
+
+div.prism-show-language > div.prism-show-language-label {
+	color: black;
+	background-color: #CFCFCF;
+	display: inline-block;
+	position: absolute;
+	bottom: auto;
+	left: auto;
+	top: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	font-size: 0.9em;
+	border-radius: 0 0 0 5px;
+	padding: 0 0.5em;
+	text-shadow: none;
+	z-index: 1;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+</style>
+
+
 </head>
-<body class='typora-export os-windows'>
-<div id='write'  class=''><h1><a name="igcse-coordinated-science-decompiled" class="md-header-anchor"></a><span>IGCSE Coordinated Science Decompiled</span></h1><hr /><h5><a name="the-purpose-of-this-site-is-to-condense-every-bits-of-knowledge-covered-by-icgse-science-into-its-simplest-form-for-exam-preps" class="md-header-anchor"></a><span>The purpose of this site is to condense every bits of knowledge covered by ICGSE Science into its simplest form for exam preps.</span></h5><h6><a name="pasted-and-refactored-from-my-revision-notes--" class="md-header-anchor"></a><span>Pasted and refactored from my revision notes : )</span></h6><h6><a name="could-be-missing-something-but-im-pretty-sure-95-of-stuff-is-included" class="md-header-anchor"></a><span>Could be missing something but I&#39;m pretty sure 95% of stuff is included</span></h6><h6><a name="since-all-the-information-here-is-simplified-it-would-only-be-ideal-to-use-as-revision-material-to-memorize-key-points-and-all-that-if-you-didnt-learn-very-much-in-the-past-two-years-go-to-kognityhttpskognitycom-and-start-over" class="md-header-anchor"></a><span>Since all the information here is simplified, it would only be ideal to use as revision material to memorize key points and all that, if you didn&#39;t learn very much in the past two years, go to </span><a href='https://kognity.com'><span>Kognity</span></a><span> and start over.</span></h6><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Estimated reading time: 20 minutes</span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Pls shut up grammar police</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div><div class="CodeMirror-gutters" style="display: none; height: 46px;"></div></div></div></pre><h1><a name="topic-checklist" class="md-header-anchor"></a><span>Topic Checklist:   </span></h1><hr /><h6><a name="scroll-down-or-use-links-below-to-redirect-yourself" class="md-header-anchor"></a><span>Scroll down, or use links below to redirect yourself</span></h6><h6><a name="use-ctrlcommand--f-to-search-for-keywords" class="md-header-anchor"></a><span>Use Ctrl/Command + F to search for keywords</span></h6><h2><a name="1-biology" class="md-header-anchor"></a><span>1. Biology</span></h2><blockquote><ul><li><a href="#B1"><span>B1 Characteristics of living organisms</span></a></li><li><a href="#B2"><span>B2 Cells</span></a></li><li><a href="#B3"><span>B3 Biological molecules</span></a></li><li><a href="#B4"><span>B4 Enzymes</span></a></li><li><a href="#B5"><span>B5 Plant nutrition</span></a></li><li><a href="#B6"><span>B6 Animal nutrition</span></a></li><li><a href="#B7"><span>B7 Transport</span></a></li><li><a href="#B8"><span>B8 Gas exchange and respiration</span></a></li><li><a href="#B9"><span>B9 Coordination and response</span></a></li><li><a href="#B10"><span>B10 Reproduction</span></a></li><li><a href="#B11"><span>B11 Inheritance</span></a></li><li><a href="#B12"><span>B12 Organisms and their environment</span></a></li><li><a href="#B13"><span>B13 Human impact on the ecosystem</span></a></li></ul></blockquote><h2><a name="2-chemistry" class="md-header-anchor"></a><span>2. Chemistry</span></h2><blockquote><ul><li><a href="#C1"><span>C1 The particulate nature of matter</span></a></li><li><a href="#C2"><span>C2 Experimental techniques</span></a></li><li><a href="#C3"><span>C3 Atoms, elements and compounds</span></a></li><li><a href="#C4"><span>C4 Stoichiometry</span></a></li><li><a href="#C5"><span>C5 Electricity and chemistry</span></a></li><li><a href="#C6"><span>C6 Energy changes in chemical reactions</span></a></li><li><a href="#C7"><span>C7 Chemical reactions</span></a></li><li><a href="#C8"><span>C8 Acids, bases and salts</span></a></li><li><a href="#C9"><span>C9 The periodic table</span></a></li><li><a href="#C10"><span>C10 Metals</span></a></li><li><a href="#C11"><span>C11 Air and water</span></a></li><li><a href="#C12"><span>C12 Sulfur</span></a></li><li><a href="#C13"><span>C13 Carbonates</span></a></li><li><a href="#C14"><span>C14 Organic chemistry</span></a></li></ul></blockquote><h2><a name="3-physics" class="md-header-anchor"></a><span>3. Physics</span></h2><blockquote><ul><li><a href="#P1"><span>P1 motion</span></a></li><li><a href="#P2"><span>P2 Work, energy and power</span></a></li><li><a href="#P3"><span>P3 Thermal Physics</span></a></li><li><a href="#P4"><span>P4 Properties of waves, including light and sound</span></a></li><li><a href="#P5"><span>P5 Electricity and magnetism</span></a></li><li><a href="#P6"><span>P6 Electric circuits</span></a></li><li><a href="#P7"><span> P7 Electromagnetic effects</span></a></li><li><a href="#P8"><span>P8 Atomic physics</span></a></li></ul></blockquote><div style="height: 10px;"> </div><hr /><div style="height: 100px;"> </div><h2 id="B1">B1 Characteristics of living organisms</h2><ul><li><p><strong><span>The seven characteristics of living organism</span></strong></p><ol start='' ><li><span>Movement</span></li><li><span>Growth</span></li><li><span>Sensitivity</span></li><li><span>Reproduction</span></li><li><span>Excretion</span></li><li><span>Nutrition</span></li><li><span>Respiration</span></li></ol></li><li><p><strong><span>Extended Stuff:</span></strong></p><ul><li><strong><span>Metabolism:</span></strong><span> Refers to all the chemical reactions within the organism.</span></li><li><strong><span>Autotroph:</span></strong><span> Organisms that make their own food (Producers).</span></li><li><strong><span>Heterotroph</span></strong><span>: Organisms that relies on other organisms for food (Consumers).</span></li></ul><p>&nbsp;</p></li></ul><h2 id="B2">B2 Cells</h2><ol start='' ><li><p><strong><span>Cell Structure</span></strong></p><ul><li><p><span>Cell organelles</span></p><ul><li><span>Cytoplasm</span></li><li><span>Nucleus</span></li><li><span>Cell membrane</span></li><li><span>Endoplasmic reticulum - for transports, like diffusion, osmosis, and the synthesis of lipids </span></li><li><span>Golgi body - packing and sending macromolecules outside of the cell</span></li><li><span>Mitochondria - supply and storage of energy for the cell</span></li><li><span>Ribosomes - site of protein synthesis </span>
-<span>Plant cells exclusive organs</span></li><li><span>Cell wall</span></li><li><span>Central vacuole</span></li><li><span>Chloroplasts</span></li></ul></li><li><p><span>Specialized cells</span></p><ul><li><span>Root hair cell (absorbing water and nutrients from the ground)</span></li><li><span>Palisade mesophyll (photosynthesis)</span></li><li><span>Red blood cell</span></li><li><span>Egg, sperm</span>
-<span>Magnification</span></li><li><span>Magnification = Size of magnified image/Size of actual image</span></li></ul></li></ul></li><li><p><strong><span>Movement in and out of the cell</span></strong><span></span><br/><span>Diffusion: movement of particles from higher concentration (area with more particles) to lower concentration (area with less particles)</span>
-<span>Osmosis: diffusion of water molecules</span></p><p>&nbsp;</p><p>&nbsp;</p></li></ol><h2 id="B3">B3 Biomolecules</h2><p><span>Biomolecules is simply </span><strong><span>organic molecules</span></strong><span> found in living organisms</span></p><p><strong><span>What is organic compound?</span></strong></p><blockquote><p><span>Organic compounds is compounds containing carbon, but </span><strong><span>not</span></strong><span> carbonate or carbon oxides.</span></p></blockquote><p><span>Biomolecules are usually polymers: large molecules in chain</span>
-<span>Monomer: single units that composes the larger polymer</span></p><ul><li><p><span>Usual functionality of biomolecules:</span></p><ol start='' ><li><span>Providing energy</span></li><li><span>Storing information (DNA and RNA)</span></li><li><span>Acting as catalysts (basically enzymes)</span></li></ol></li><li><p><span>Reactions of biomolecules:</span></p><ol start='' ><li><span>Condensation</span>
-<span> or more monomers reacts and forms covalent bond together with water, forming a polymer</span></li><li><span>Hydrolysis</span>
-<span>alent bond of hydrated polymer is broken into two monomers, each bonding with a OH</span>
-<span>	</span></li></ol></li></ul><p><strong><span>Typical biomolecules:</span></strong><span> Carbohydrates, Fats, Protein</span>
-<span>All composed of C,H,O,N,P</span>
-<span>	</span></p><ul><li><p><strong><span>Typical biomolecules - Carbs</span></strong></p><ol start='' ><li><span>Monosaccharide- Glucose and fructose</span></li><li><span>Disaccharide- maltose found in malt in seeds and digestion, lactose from milk and sucrose found in plants for transport</span></li><li><span>Polysaccharide- starch found in plants and glycogen found in animals livers and muscles</span></li></ol></li><li><p><strong><span>Typical biomolecules - Fats and oil</span></strong></p><ol start='' ><li><span>Fats and oil is composed of </span><strong><span>Glycerol</span></strong><span> and </span><strong><span>fatty acids</span></strong></li><li><span>Fats and oil contains twice as much energy as carbohydrates does</span>
-<span>Fats and oil are triglycerides</span>
-<span>Fats comes from animal, while oil comes from plants</span></li></ol></li><li><p><strong><span>Typical biomolecules - Proteins</span></strong></p><ol start='' ><li><span>Proteins are composed of C,H,O and amino group and carboxyl group</span></li><li><span>Proteins are a varied group</span></li><li><span>Enzymes are also proteins</span></li><li><span>Long chains of amino acids are called polypeptides</span></li><li><span>Contains phosphorus (P) </span></li></ol></li><li><p><strong><span>Testing for biomolecules</span></strong></p><ol start='' ><li><p><span>Testing for </span><strong><span>reduced sugar</span></strong></p><ul><li><span>Testing for reduced sugar uses benedict&#39;s solution</span></li><li><span>Benedicts solution turns from blue to red when testing for reducing sugar</span></li><li><span>Change of color of Benedict solution: Blue -&gt; green -&gt; yellow -&gt; orange -&gt; red</span></li></ul></li><li><p><span>Testing for </span><strong><span>starch</span></strong></p><ul><li><span>Testing for starch uses iodine solution</span></li><li><span>If starch is present, the solution turns dark blue, otherwise it remains orange-brown</span></li></ul></li><li><p><span>Testing for </span><strong><span>fats and oils</span></strong></p><ul><li><span>Testing for fats and oils uses ethanol</span></li><li><span>Turns transparent when fat or oil is present, otherwise remain transparent</span></li></ul></li><li><p><span>Testing for </span><strong><span>protein</span></strong></p><ul><li><span>Testing for protein uses biuret</span></li><li><span>If protein present, solution turns purple, otherwise remain blue</span></li></ul></li></ol></li></ul><h2 id="B4">B4 Enzymes</h2><p><span>Enzyme is a biological catalyst, it speeds up some reaction, its protein, therefore it would be denatured at high temperature, and denaturation is permanent.</span></p><p><span>The shape of enzyme fits the reactant, since it have to fit the reactant, it has an </span><strong><span>active site</span></strong><span>, which is the only side that could adapt to and fits the reactant.</span>
-<span>	</span></p><ul><li><strong><span>Optimum temperature for enzyme activity:</span></strong></li></ul><p><img src="https://kognity-prod.imgix.net/media/edusys_2/content_uploads/aw-05_aw12.15b9eda331a06af02c83.png?w=1000&auto=compress">
-<span>	</span></p><ul><li><p><strong><span>Optimum pH level for enzymes is another story</span></strong></p><p><span>Its different for every enzymes</span></p><p>&nbsp;</p></li></ul><h2 id="B5">B5 Plant Nutrition</h2><ul><li><p><strong><span>Photosynthesis</span></strong></p><ul><li><p><span>Photosynthesis is the primary source of energy for plants, it takes carbon dioxide and water and light to make glucose and oxygen as a biproduct</span></p></li><li><p><span>Photosynthesis is done in chlorophyll in plant cells</span></p></li><li><p><span>Adaptation characteristics of plants for photosynthesis:</span></p><ol start='' ><li><span>Thin leaves: allow chlorophyll to absorb more lights, and diffusion distance of CO2 made short</span></li><li><span>Large surface area for leaf: allow the plants to take in more sunlight and CO2</span></li><li><span>Stomata: entrance and exit for CO2 and oxygen</span></li><li><span>Xylem and phloem: supply water to cells and transport products of photosynthesis</span></li><li><span>Stem and leaf stalks: hold leaves at the right angle to absorb as much sunlight as possible</span></li><li><span>Large surface area of root hair cells: larger surface to absorb more nutrients in soil</span></li></ol></li><li><p><span>Different chemical energy form in plants:</span></p><ul><li><span>Sucrose for transportation of energy within plants, starch for storage of energy within plants</span></li></ul></li></ul></li><li><p><strong><span>Leaf Structure</span></strong></p><ul><li><p><strong><span>Parts:</span></strong></p><ul><li><span>Chloroplasts: Located on the upper part  Contain chlorophylls for photosynthesis</span></li><li><span>Waxy cuticle: Located on the top part of the leaf, stops water from evaporating from the top</span></li><li><span>Stomata: Small openings located under the leaf</span></li><li><span>Upper and lower epidermis: inner layer of cells, upper epidermis doesn’t contain chloroplast, lower epidermis do contain chloroplast</span></li><li><span>Palisade mesophyll: Upper layer of closed packed cells that have large amount of chloroplast</span></li><li><span>Spongy mesophyll:  middle layer of cells that are loosely spaced that allows diffusion of gases</span></li><li><span>Xylem: Carries water from roots to the leaves</span></li><li><span>Phloem: Carries sucrose away from the leaf</span></li><li><span>Vascular bundles: Contains xylem and phloem cells, located within the spongy mesophyll</span></li></ul></li></ul></li><li><p><strong><span>The roles and importance of minerals</span></strong></p><ul><li><p><strong><span>Nitrate</span></strong><span> and </span><strong><span>Magnesium</span></strong><span> ions are absorbed into the plants from the soil</span></p><ul><li><span>Nitrates contains nitrogen, essential for composing amino acids, and producing proteins, which is vital for plants</span></li><li><span>Magnesium is essential for the synthesis of chlorophyll, therefore its important for plants</span></li></ul></li></ul></li></ul><h2 id="B6">B6 Animal Nutrition</h2><ul><li><p><strong><span>Types of animal / human nutrition</span></strong></p><ul><li><span>Carbs - short term energy supply</span></li><li><span>Proteins - building blocks, used for repair and growth of body</span></li><li><span>Fats - long term storage of energy, fat contains two times the energy comparing to the same amount of carbs</span></li><li><span>Vitamin C - growth and repair</span></li><li><span>Vitamin D - absorption of calcium</span></li><li><span>Calcium - strengthen bones and teeth, helps with muscle contraction and nerve transmission</span></li><li><span>Iron - Production of RBC</span></li><li><span>Water - transports thought the body, made up 60% of human body</span></li></ul><p>&nbsp;</p></li></ul><h2 id="B7">B7.1 Transports in Plants</h2><ol start='' ><li><p><strong><span>Water</span></strong></p><ul><li><p><span>Xylem in plants is for transporting water in plants, it also supports the stem of the plants, xylem are made of lignin, which is very strong</span>
-<span>Root hair cells have large surface area to take in water and minerals from soil</span></p></li><li><p><span>Transpiration</span></p><ul><li><p><span>Plant lose water by evaporation, the evaporated water is released from the stomata</span></p></li><li><p><span>Plant leaves have large area, allowing the water in mesophyll to be evaporated</span></p></li><li><p><span>The interconnecting air spaces creates an concentration gradient</span></p></li><li><p><span>There are many stomata for water to diffuse out of the leaf</span></p></li><li><p><strong><span>Rate of transpiration is affected by:</span></strong></p><ul><li><span>Temperature</span></li><li><span>Humidity(if the water potential outside the plant are already high, osmosis wont move water outward)</span></li><li><span>Wind speed</span></li><li><span>Light intensity</span></li><li><span>Water supply</span></li></ul></li></ul></li></ul></li></ol><h2><a name="b72-transports-in-animals" class="md-header-anchor"></a><span>B7.2 Transports in Animals</span></h2><ul><li><p><strong><span>Cardiovascular system</span></strong></p><ul><li><p><span>Three types of blood vessels</span></p><ul><li><p><span>Artery: carries oxygenated blood</span></p></li><li><p><span>Vein: carries deoxygenated blood</span></p></li><li><p><span>Capillary: small vessels delivering blood to body tissues</span></p></li><li><p><span>Artery vs Vein</span></p><ul><li><span>Artery have thick and smooth wall, blood pressure in artery is higher than pressure in vein</span></li><li><span>Vein&#39;s wall are thinner than artery, wall of vein are made of single layer of cells</span></li></ul></li></ul></li><li><p><span>The </span><em><span>&quot;Pump&quot;</span></em><span>: Heart</span></p></li><li><p><strong><span>Double circulatory system</span></strong></p><ul><li><p><span>Mammals have double circulatory system, it contains both </span><strong><span>pulmonary circulation</span></strong><span> and </span><strong><span>systemic circulation</span></strong></p><ul><li><p><span>Pulmonary circulation:</span></p><ul><li><span>Between heart and lungs</span></li><li><span>Pulmonary arteries carries deoxygenated blood from heart to lungs</span></li><li><span>Pulmonary vein carries oxygenated blood from lungs to heart</span></li></ul></li><li><p><span>Systemic circulation</span></p><ul><li><span>Between heart and the whole body</span></li><li><span>Systemic arteries carries oxygenated blood to the rest of the body</span></li><li><span>Systemic veins carries deoxygenated blood from the rest of the body to heart</span></li></ul></li></ul></li></ul></li><li><p><span>The structure of heart</span></p></li></ul><p><img src="https://kognity-prod.imgix.net/media/edusys_143/content_uploads/aw09_aw06.f6230069d543acd0a5ea.png?w=800&auto=compress"></p></li></ul><ul><li><span>Other vessels:</span></li><li><span>Vena cava lets the deoxygenated blood flow back to heart</span></li><li><span>Aorta takes oxygenated from the heart to arteries</span></li><li><span>Renal artery is the blood supply from heart to kidney</span></li><li><span>Renal vein takes blood from the kidney to vena cava, then returned to heart</span></li><li><span>Arteriole is the small arteries that branches off from artery to capillary</span></li><li><span>Venule takes deoxygenated blood from the capillaries to back to vein</span></li><li><strong><span>Coronary artery disease</span></strong></li><li><span>Coronary artery are vessels that supplies the </span><strong><span>Cardiac muscle</span></strong><span>, its thin and easy to be clotted by fats, coronary disease is caused by this, it could lead to heart attack, high animal fat consumption and high salt consumption could lead to coronary heart disease, also, cigarettes could increase the chance of getting coronary heard disease, since a major ingredient for cigarette is nicotine, it could damage the circulatory system, eventually leading to coronary heart disease</span></li><li><span>Transport in blood</span></li><li><span>What&#39;s in the blood?</span></li><li><span>Blood are made of blood cells and plasma, for cells, there is red blood cells and white blood cells, and platelets, red blood cells are responsible for oxygen transport, and white blood cells are part of the immune system, platelets are important because it turns blood into clots when there is bleeding (once come in contact with air), plasma is mostly water, nutrients and hormones, and carbon dioxide are dissolved in it</span></li></ul><h2 id="B8">B8 Gas Exchange and respiration</h2><ul><li><p><strong><span>Gas in lungs</span></strong></p><ul><li><span>Gas goes into mouth or nostril into larynx, and trachea, then bronchi, and bronchioles into alveoli, then diffuses into capillaries</span></li><li><span>Contraction of diaphragm enlarges lungs and negative pressure in lung pushes air in, then diaphragm is relaxed, lungs are shrunk, pushing air out</span></li></ul></li><li><p><strong><span>Protection for the respiratory system</span></strong></p><ul><li><p><span>Goblet cells, mucus, and ciliated cells removes pathogens and particles from the respiratory system, Goblet cells produces mucus, ciliated cells pushes particles out of the respiratory system, mucus catches particles that are going into the lungs</span>
-<span>Diseases in respiratory system</span></p></li><li><p><span>Diseases</span></p><ul><li><p><strong><span>Bronchitis</span></strong></p><ul><li><span>Smoking could cause multiple respiratory diseases, one is bronchitis, tobacco smoke is hot, the hot smoke going into bronchi could damage the cilia, making it vulnerable to particles, and with insufficient functioning cilia, respiratory system produces more mucus to protect it, resulting in mucus to accumulate in lungs, and affect normal breathing</span></li></ul></li><li><p><strong><span>Emphysema</span></strong></p><ul><li><span>Smoke contains carbon particles, carbon particles could sticks in alveoli, white blood cells would try to remove those carbon particles by secreting chemical substances, however, those chemical substances could damage the alveoli itself also, and as more carbon particles accumulate, alveoli gets more damaged, and there will be less surface area for gas exchange to take place, or even make the alveoli not work at all</span></li><li><span>Also, smokes contain carbon monoxide, it bonds with the hemoglobin (red blood cells) and make it malfunction, as more hemoglobin gets damaged, insufficient oxygen are delivered around the body</span></li></ul></li></ul></li></ul></li><li><p><strong><span>Aerobic respiration:</span></strong><span> glucose + oxygen -&gt; carbon dioxide + water</span></p></li><li><p><strong><span>Anaerobic respiration:</span></strong><span> glucose -&gt; lactic acid</span></p></li></ul><h2 id="B9">B9 Coordination and homeostasis</h2><ul><li><p><strong><span>Nervous system:</span></strong><span> the nervous system is made of two parts, one is the </span><strong><span>CNS</span></strong><span> (Central Nervous System) another is the </span><strong><span>PNS</span></strong><span> (Peripheral Nervous System), Central nervous system is basically brain and the spinal cord, and PNS is nerves that spreads around the rest of the body</span></p></li><li><p><strong><span>Neurons:</span></strong><span> neuron are the cells that composes the nerves as individual cells, just like other specialized cells, it has different parts:</span></p><ul><li><span>Nucleus</span></li><li><span>Axon carries impulse </span><strong><span>away</span></strong><span> from the cell</span></li><li><span>Dendrites accepts impulses and </span><strong><span>carry</span></strong><span> it toward the cell</span></li><li><span>Nerve ending only exists in motor neuron which connects to muscles and make it move</span></li></ul></li><li><p><strong><span>Types of neurons</span></strong></p><ul><li><span>Sensory neuron</span></li><li><span>Relay neuron</span></li><li><span>Motor neuron</span></li></ul></li><li><p><strong><span>Reflexes</span></strong><span>: reflex is the natural human response toward a stimuli, brain is not involved in the reflex action</span></p><ul><li><p><span>Parts of reflexes:</span></p><ul><li><strong><span>Receptor:</span></strong><span> parts that detects the stimulus</span></li><li><strong><span>Sensory neuron</span></strong><span> which receives the stimulus</span></li><li><strong><span>Relay neuron</span></strong><span> which carries the impulse to the spinal cord</span></li><li><strong><span>Motor neuron</span></strong><span> which finally carries the impulse to the muscle or glands</span></li><li><strong><span>Effector</span></strong><span> which is the muscle or gland which performs the action as the output of a reflex</span></li></ul></li></ul></li><li><p><strong><span>The eye</span></strong></p><ul><li><span>Pupil: ring of muscles that controls the amount of light entering the eye</span></li><li><span>Cones: captures colored light, but does not function with low intensity of light</span></li><li><span>Rods: captures the intensity of light, works under environments with low intensity of light</span></li><li><span>Retina: layers of light receptors on the inner part of the eyes</span></li><li><span>Lens: a jelly like structure to refract entering light onto the retina</span></li><li><span>Suspensory ligament: holds the lens in place and stretch it</span></li><li><span>Cornea: the white, rigid part of the eye, provides physical protection</span></li><li><span>Optical nerve: the nerve that carries electric impulse signals toward the brain</span></li><li><span>Blind spot: part of the retina in front of the optical nerve that is lacking receptors</span></li></ul></li></ul><h2 id="B10">B10 Reproduction</h2><ul><li><p><strong><span>Cell division</span></strong></p><ul><li><p><span>Mitosis</span></p><ul><li><span>Used for sexual reproduction</span></li><li><span>Mitosis doesn’t have genetic variation</span></li><li><span>Mitosis produce </span><strong><span>two</span></strong><span> daughter cells at a time</span></li></ul></li><li><p><span>Meiosis</span></p><ul><li><span>Used for Repair, Growth and asexual reproduction</span></li><li><span>Meiosis does have genetic variation</span></li><li><span>Meiosis produce </span><strong><span>four</span></strong><span> daughter cells at a time</span></li></ul></li></ul></li><li><p><strong><span>Asexual reproduction</span></strong></p><ul><li><p><span>Advantages of asexual reproduction</span></p><ul><li><span>Fast</span></li><li><span>Only one parent is required</span></li></ul></li><li><p><span>Disadvantages of asexual reproduction</span></p><ul><li><span>Less genetical variation (vulnerable to diseases)</span></li></ul></li></ul></li><li><p><strong><span>Sexual reproduction</span></strong></p><ul><li><p><span>Advantages of sexual reproduction</span></p><ul><li><span>Greater genetic variation</span></li></ul></li><li><p><span>Disadvantages of sexual reproduction</span></p><ul><li><span>Slow</span></li><li><span>Requires two parents</span></li></ul></li><li><p><strong><span>Sexual reproduction in plants</span></strong></p><ul><li><p><span>Parts of flower</span></p><ul><li><p><span>Sepal</span></p><ul><li><span>Protects flower from drying</span></li></ul></li><li><p><span>Petal</span></p><ul><li><span>Petals are usually colorful to attract insects and animals</span></li></ul></li><li><p><span>Carpel</span></p><ul><li><span>The female reproductive organ of plants</span></li></ul></li><li><p><span>Style</span></p><ul><li><span>Long tube that provide passage to let pollens pass into ovary</span></li></ul></li><li><p><span>Stigma</span></p><ul><li><span>At the top of Style, entrance of Ovary</span></li></ul></li><li><p><span>Stamen</span></p><ul><li><span>Male reproductive organ of plants</span></li></ul></li><li><p><span>Filament</span></p><ul><li><span>Long rod that holds the anther up</span></li></ul></li><li><p><span>Anther</span></p><ul><li><span>Part where pollen is released</span></li></ul></li></ul></li><li><p><strong><em><span>Hermaphrodite</span></em></strong></p><ul><li><span>Plant with both male and female reproductive organ</span></li></ul></li><li><p><span>Insect pollinated plants</span></p><ul><li><span>Have large petals to attract insects</span></li><li><span>Have short stamen and carpel</span></li><li><span>Pollens are spiky to stick on insects</span></li><li><span>Produce sweet nectars to attract insects to eat the nectar</span></li><li><span>Plants have a unique smell to attract insects</span></li></ul></li><li><p><span>Wind pollinate plants</span></p><ul><li><span>Have small petals to prevent blocking wind</span></li><li><span>Have long stamen and carpel to catch wind</span></li><li><span>Pollens are smooth to not catch on surfaces</span></li><li><span>Does not have nectars</span></li><li><span>Does not have such unique smells</span></li></ul></li><li><p><span>Process of plant reproduction</span></p><ul><li><p><span>Pollens goes down the pollen tube when it reached the stigma</span></p></li><li><p><span>Ovule gets fertilized by pollens</span></p></li><li><p><span>Ovule started to grow into seeds</span></p></li><li><p><span>If the condition is right:</span></p><ul><li><span>Enough oxygen</span></li><li><span>Enough water</span></li><li><span>Optimum temperature</span></li></ul></li><li><p><span>The seeds begins to germinate</span></p></li></ul></li></ul></li><li><p><strong><span>Sexual reproduction in human</span></strong></p><ul><li><p><span>Female reproductive organ</span></p><ul><li><p><span>Parts</span></p><ul><li><p><span>Ovary</span></p><ul><li><span>Where egg cells are produced</span></li></ul></li><li><p><span>Fallopian tube / Oviducts</span></p><ul><li><span>Transports egg cells to the uterus, also the site of fertilization</span></li></ul></li><li><p><span>Uterus</span></p><ul><li><span>The area for embryo to attach to and develop</span></li></ul></li><li><p><span>Cervix</span></p><ul><li><span>A ring of muscle that separates the vagina and uterus</span></li></ul></li><li><p><span>Vagina</span></p><ul><li><span>A elastic muscular canal</span></li></ul></li></ul></li><li><p><span>Menstrual cycle</span></p><ul><li><p><span>Cycle of production of egg cells</span></p></li><li><p><span>Cycle of preparation of pregnancy</span></p></li><li><p><span>Menstrual phase (day 1-5)</span></p><ul><li><span>Uterus lining is broken down if the egg is not fertilized</span></li></ul></li><li><p><span>Follicular phase (day 6-14)</span></p><ul><li><span>The lining of uterus begin to repair</span></li></ul></li><li><p><span>Luteal phase (day 14-28)</span></p><ul><li><span>The lining of the uterus grows thicker</span></li></ul></li></ul></li></ul></li><li><p><span>Male reproductive organ</span></p><ul><li><p><span>Sperm duct</span></p><ul><li><span>Transfers semen from the testes to the penis</span></li></ul></li><li><p><span>Urethra</span></p><ul><li><span>Passage for urine</span></li></ul></li><li><p><span>Prostate gland</span></p><ul><li><span>Secretes fluid to protect sperm, know as semen</span></li></ul></li><li><p><span>Scrotum</span></p><ul><li><span>A sack of skin that have large surface area, used to lower the temperature</span></li></ul></li></ul></li><li><p><span>Fertilization </span></p><ul><li><p><span>Characteristic of sperm</span></p><ul><li><span>Movable (1-3mm per hour)</span></li><li><span>Much smaller than egg</span></li></ul></li><li><p><span>Characteristic of egg</span></p><ul><li><span>Immovable (well, it cant on its own)</span></li><li><span>Much larger than sperm</span></li></ul></li><li><p><span>Sperm - 23 chromosomes</span></p></li><li><p><span>Egg - 23 chromosomes</span></p></li><li><p><span>Embryo - fertilized egg - 46 chromosomes</span></p></li><li><p><span>Fertilization occurs in fallopian tube/oviduct</span></p></li><li><p><span>Embryo is transported into uterus and attached to the placenta on the uterus lining</span></p></li></ul></li><li><p><span>Pregnancy</span></p><ul><li><p><span>Placenta</span></p><ul><li><span>Transportation of nutrients between the fetus and mother</span></li><li><span>Fetus and mother&#39;s blood does not mix, therefore placenta act as a filter</span></li></ul></li><li><p><span>Amniotic sac</span></p><ul><li><span>Amniotic sac contains amniotic fluid to provide physical protection for the fetus</span></li></ul></li><li><p><span>Umbilical cord</span></p><ul><li><span>Connects fetus and mother</span></li></ul></li></ul></li></ul></li></ul></li></ul><h2 id="B11">B11 Inheritance</h2><ul><li><p><strong><span>Chromosomes</span></strong></p><ul><li><p><span>Chromosomes are threads of DNA which carries genetic information</span></p></li><li><p><span>In body cells, there is normally 23 pairs of chromosomes</span></p></li><li><p><span>The 22nd chromosome is X, 23rd chromosomes is X or Y, those are sex chromosomes</span></p><ul><li><span>Male have XY</span></li><li><span>Female have XX</span></li><li><span>Egg cells only contain X chromosome</span></li><li><span>Sperm could contain either X or Y chromosome</span></li></ul></li><li><p><span>Genotypes</span></p><ul><li><p><span>When two sex cells combine, the chromosome are taken within a pair in two cells and combined like this:</span><br/><span> </span><span>	</span></p><figure><table><thead><tr><th>&nbsp;</th><th><span>X</span></th><th><span>x</span></th></tr></thead><tbody><tr><td><span> </span><strong><span>X</span></strong><span> </span></td><td><span> XX   </span></td><td><span> Xx   </span></td></tr><tr><td><span> </span><strong><span>x</span></strong><span> </span></td><td><span> Xx   </span></td><td><span> xx   </span></td></tr></tbody></table></figure></li><li><p><span>Dominant genotype: Capitalized letters, if one dominant genotype exists, the gene would result just as that genotype</span></p></li><li><p><span>Recessive genotype: small letters, only result as a valid genotype if two of the chromosome are both recessive</span></p></li><li><p><span>Homozygous: contain either both dominant or both recessive</span></p></li><li><p><span>Heterozygous: contain both dominant and recessive</span></p></li></ul></li><li><p><span>Phenotypes</span></p><ul><li><p><span>The physical representation of genes</span></p><ul><li><span>Hair color</span></li><li><span>Skin color</span></li><li><span>…</span></li></ul></li></ul></li><li><p><strong><span>Mutation</span></strong></p><ul><li><span>Sudden change in genes caused by external factors</span></li></ul></li></ul></li></ul><h2 id="B12">B12 Organisms and their environments</h2><ul><li><p><strong><span>Energy flow</span></strong></p><ul><li><p><span>Source of all energy in the food chain - sun light</span></p></li><li><p><span>Plants utilizes energy delivered by sunlight to produce food and survive</span></p></li><li><p><span>When animal eats plants, the energy is absorbed and the energy flows up the food chain</span></p></li><li><p><span>The food chain usually contain two to five organisms</span></p><ul><li><span>Producers</span></li><li><span>Primary consumers (herbivore: plant eaters)</span></li><li><span>Secondary consumers (carnivore: animal/meat eaters)</span></li><li><span>Tertiary consumers</span></li><li><span>Quaternary consumers</span></li><li><span>Decomposers (feeds on dead bodies of all above, which is also a consumer, but could be consumed by plants)</span></li></ul></li><li><p><span>All those groups mentioned above are called trophic levels</span></p></li><li><p><span>Trophic level increases as it flows up the food chain</span></p></li><li><p><span>A food chain must include a producer</span></p></li><li><p><span>The transformation of energy is not total, as the energy flows up the food chain, it only keep </span><strong><span>90%</span></strong><span> of the total amount of energy going up each level</span></p></li></ul></li></ul><h2 id="B13">B13 Human influences on the ecosystem</h2><ul><li><p><strong><span>The carbon cycle</span></strong></p><ul><li><p><span>Photosynthesis</span></p><ul><li><span>Plants take carbon from the atmosphere and produce glucose (the ONLY way that carbons could leave the atmosphere)</span></li></ul></li><li><p><span>Respiration</span></p><ul><li><span>Plants and animals perform respiration, as their cell activity releases carbon dioxide and released into atmosphere</span></li></ul></li><li><p><span>Feeding</span></p><ul><li><span>Feeding of plants and animals also transfers carbon</span></li></ul></li><li><p><span>Decomposition</span></p><ul><li><span>Dead bodies of plants and animals gets decomposed and the carbon dioxides are released back into atmosphere</span></li></ul></li><li><p><span>Fossilization</span></p><ul><li><span>If the dead body gets buried, high temperatures and pressure turns it into fossil fuels, which could be used to combust</span></li></ul></li><li><p><span>Combustion</span></p><ul><li><span>Combustion of fossil fuels releases carbon monoxide and carbon dioxide back into atmosphere</span></li></ul></li><li><p><span>Human impact on the carbon cycle</span></p><ul><li><span>The carbon cycle affected if any stage of carbon cycle is altered, human impact on carbon cycle by photosynthesis could be killing plants by a large quantity(cutting trees), or increased combustions of fossil fuels, those all contributes to the increased carbon level in the atmosphere</span></li></ul></li></ul></li><li><p><strong><span>Deforestation</span></strong></p><ul><li><p><span>Deforestation, massive amount of loss of trees caused by artificial factors, could harm the environment in multiple ways:</span></p><ul><li><p><span>Species extinction</span></p><ul><li><span>As the local ecosystem could be heavily relied on trees, absence of trees around the area could affect the population of other species around the area as most of them relies on trees and could not adapt to such large change in the environment</span></li></ul></li><li><p><span>Soil erosion</span></p><ul><li><span>Trees have large and long extending roots, which supports them and hold them in place, it also provides support for soils, if trees died out in an area, soil would lose its support, therefore eroding, turning into dust storms or being carried by waters</span></li></ul></li><li><p><span>Flooding</span></p><ul><li><span>If the soil is deformed, the water cycle is likely to be affected, as there would be less restrictions of water flows, which could eventually results in flooding</span></li></ul></li><li><p><span>Increased CO2 (mentioned above)</span>
-<span>Water pollution</span></p></li></ul></li></ul></li><li><p><strong><span>Chemical wastes</span></strong></p><ul><li><span>The pollution of water by chemical could cause fatal effects on the entire local ecosystem, since the whole ecosystem relies on water for drinking, and consumption of aquatic animals which were active around the polluted area could spread the chemical pollution in the water around and up the food chain</span></li></ul></li><li><p><strong><span>Discarded rubbish</span></strong></p><ul><li><span>Discarded rubbish could harm marine life as they could mistake rubbishes as foods</span></li></ul></li><li><p><strong><span>Untreated sewage</span></strong></p><ul><li><span>Untreated sewages contains harmful bacteria, as they are released into ocean or rivers, the large scale of bacterial activity around the area could decrease the oxygen level in the water, leaving other organisms with limited supplies</span></li></ul></li><li><p><strong><span>Fertilizers</span></strong></p><ul><li><span>Fertilizers releasing into water could massively increase the amount of microorganisms as they consume the nutrients in the fertilizers, those large groups of organisms floating on the surface of water could block the sunlight passing under the water, many organisms that relies on sunlight would die off, and as the nutrients depletes, the large group of micro organisms dies off also, leaving decomposers a massive amount of consumables, increase of activity of decomposition leads to oxygen to run off and more organisms dying</span></li><li><span>The massive increase of nutrition supply is called </span><strong><em><span>eutrophication</span></em></strong></li></ul></li></ul><h2 id="C2">C2 Experimental techniques</h2><ul><li><p><strong><span>Solvent</span></strong></p><ul><li><span>Things to dissolve in (e.g. water)</span></li></ul></li><li><p><strong><span>Solute</span></strong></p><ul><li><span>Things that’s dissolved (e.g. salt)</span></li></ul></li><li><p><strong><span>Methods of purification</span></strong></p><ul><li><p><span>Filtration</span></p><ul><li><span>Very simple technique to separate an INSOLUBLE solid from a liquid, filter paper is used for separation of fine particles</span></li></ul></li><li><p><span>Crystallization</span></p><ul><li><span>Crystallization is a separation technique which requires boiling of liquid solvent to extract solutes from the solvent which are yet to evaporate because of the difference in boiling points, it is cooled down and crystallizes into solids</span></li></ul></li><li><p><span>Distillation</span></p><ul><li><span>Distillation is used to separate multiple substances which have different boiling points, as the temperature increases, substances with lower boiling point gets boiled first, it is then cooled down and condensed into liquid to be collected, repeats those steps with gradual increment of temperature would achieve separation of substances with different boiling points</span></li></ul></li><li><p><span>Paper chromatography</span></p><ul><li><span>Paper chromatography could be used as a separation technique, papers could separate different chemicals which could then be washed off the paper</span></li></ul></li></ul></li></ul><h2 id="C4">C4 Stoichiometry</h2><p><strong><span>For Stoichiometry there is only these things to memorize:</span></strong><span> </span></p><ol start='' ><li><p><strong><em><span>The Avogadro constant</span></em></strong><span>  </span></p><blockquote><p><strong><em><span>6.02 × 10</span><sup><span>23</span></sup></em></strong></p></blockquote><ul><li><span>The amount of particle/atoms in 12g of carbon-12</span>
-<strong><span>1 mole of substance = (The Avogadro constant) 6.02 × 10</span><sup><span>23</span></sup><span> molecules of substance</span></strong></li><li><span>(Relative atomic/molecular mass/mass number) in grams = mass of one mole of substance</span></li></ul></li><li><p><strong><em><span>Relative molecular mass</span></em></strong></p><ul><li><span>The sum of the mass number of all atoms within a molecule</span></li></ul></li></ol><ol start='3' ><li><p><strong><em><span>Molar gas volume</span></em></strong></p><ul><li><span>Under same temperature and pressure, the same volume of gas could contain a equal number of molecules, no matter what the gas is</span></li><li><span>Number of moles = gas volume / 24</span></li></ul></li><li><p><strong><span>Formula</span></strong><span> (Simple AF)</span></p><ul><li><p><span>Number of moles = </span><sub><span>a</span></sub><span>M</span></p></li><li><p><span>Relative atomic / molecular mass = </span><sub><span>R</span></sub><span>M</span></p></li><li><p><span>Total Substance Mass = M</span></p><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block md-math-block md-rawblock" id="mathjax-n16176" cid="n16176" mdtype="math_block"><div class="md-rawblock-container md-math-container" tabindex="-1"><div class="MathJax_SVG_Display" style="text-align: center;"><span class="MathJax_SVG" id="MathJax-Element-64-Frame" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="11.631ex" height="5.379ex" viewBox="0 -1409.3 5007.6 2315.9" role="img" focusable="false" style="vertical-align: -2.106ex; max-width: 100%;"><defs><path stroke-width="0" id="E693-MJMATHI-61" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path><path stroke-width="0" id="E693-MJMATHI-4D" d="M289 629Q289 635 232 637Q208 637 201 638T194 648Q194 649 196 659Q197 662 198 666T199 671T201 676T203 679T207 681T212 683T220 683T232 684Q238 684 262 684T307 683Q386 683 398 683T414 678Q415 674 451 396L487 117L510 154Q534 190 574 254T662 394Q837 673 839 675Q840 676 842 678T846 681L852 683H948Q965 683 988 683T1017 684Q1051 684 1051 673Q1051 668 1048 656T1045 643Q1041 637 1008 637Q968 636 957 634T939 623Q936 618 867 340T797 59Q797 55 798 54T805 50T822 48T855 46H886Q892 37 892 35Q892 19 885 5Q880 0 869 0Q864 0 828 1T736 2Q675 2 644 2T609 1Q592 1 592 11Q592 13 594 25Q598 41 602 43T625 46Q652 46 685 49Q699 52 704 61Q706 65 742 207T813 490T848 631L654 322Q458 10 453 5Q451 4 449 3Q444 0 433 0Q418 0 415 7Q413 11 374 317L335 624L267 354Q200 88 200 79Q206 46 272 46H282Q288 41 289 37T286 19Q282 3 278 1Q274 0 267 0Q265 0 255 0T221 1T157 2Q127 2 95 1T58 0Q43 0 39 2T35 11Q35 13 38 25T43 40Q45 46 65 46Q135 46 154 86Q158 92 223 354T289 629Z"></path><path stroke-width="0" id="E693-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path stroke-width="0" id="E693-MJMATHI-72" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g transform="translate(167,0)"><g transform="translate(-15,0)"><g transform="translate(0,-9)"><use transform="scale(0.707)" xlink:href="#E693-MJMATHI-61" x="0" y="-213"></use><use xlink:href="#E693-MJMATHI-4D" x="474" y="0"></use><use xlink:href="#E693-MJMAIN-3D" x="1802" y="0"></use><g transform="translate(2580,0)"><g transform="translate(397,0)"><rect stroke="none" width="1589" height="60" x="0" y="220"></rect><use xlink:href="#E693-MJMATHI-4D" x="269" y="676"></use><g transform="translate(60,-686)"><use transform="scale(0.707)" xlink:href="#E693-MJMATHI-72" x="0" y="-213"></use><use xlink:href="#E693-MJMATHI-4D" x="418" y="0"></use></g></g></g></g></g></g></g></svg></span></div><script type="math/tex; mode=display" id="MathJax-Element-64">\begin{align*}
-	_{a}M = \frac{M} {_{r}M}
-\end{align*}</script></div></div><p>&nbsp;</p></li></ul></li></ol><h2 id="C5">C5 Electricity and chemistry</h2><ul><li><p><strong><span>Electrolysis</span></strong></p><ul><li><p><span>Electrolysis is for breaking down of an ionic compound, by the passage of electricity and the attraction of charged matters</span></p></li><li><p><span>Components of electrolysis</span></p><ul><li><span>A battery / power source</span></li><li><span>Two electrodes (one positive one negative)</span></li><li><span>Positive electrode: Anode</span></li><li><span>Negative electrode: Cathode</span></li><li><strong><em><span>PANIC</span></em></strong><span> (Positive Anode n&#39; Negative Cathode)</span></li><li><span>An electrolyte (molten or aqueous ionic compound to be broken down)</span></li></ul></li><li><p><span>Reduction: gaining of election/decrease in charge</span></p></li><li><p><span>Oxidation: losing of electron/increase in charge</span></p></li><li><p><span>Positive ions are attracted to the negative cathode</span></p></li><li><p><span>Negative ions are attracted to the positive anode</span></p></li><li><p><span>Reactivity series (increasing)</span></p><ol start='' ><li><span>Gold</span></li><li><span>Silver</span></li><li><strong><span>Copper</span></strong></li><li><span>Hydrogen</span></li><li><span>Iron</span></li><li><span>Zinc</span></li><li><strong><span>Carbon</span></strong></li><li><span>Aluminum</span></li><li><span>Magnesium</span></li><li><span>Calcium</span></li><li><span>Lithium</span></li></ol></li></ul></li></ul><h2 id="C6">C6 Energy changes in chemical reactions</h2><ul><li><p><strong><span>Exothermic reaction:</span></strong><span> releases energy </span><em><span>(temperature increase)</span></em></p></li><li><p><strong><span>Endothermic reaction:</span></strong><span> absorbs energy </span><em><span>(temperature decrease)</span></em></p></li><li><p><strong><span>Bond energy</span></strong></p><ul><li><span>Energy is released when new bonds is formed</span></li><li><span>Energy is absorbed when bonds are broken</span></li></ul></li><li><p><strong><span>Activation energy:</span></strong><span> energy needed to initiate certain reaction</span></p></li></ul><h2 id="C7">C7 Chemical reaction</h2><p><strong><span>Rate of reaction</span></strong><span>  </span></p><blockquote><p><span>How does reaction occur?</span>
-<span>Collision of molecules.</span>
-<span>The harder the better.</span></p></blockquote><p><span>Therefore,  </span></p><ul><li><p><span>Factors that affect rate of reaction</span></p><ul><li><span>+Concentration = Rate+ (More particles)</span></li><li><span>-Particle size = +Surface area = Rate+ (More particle could come in contact with other particles)</span></li><li><span>+Temperature = Rate+ (Faster movement of molecules = Harder collision of molecules)</span></li><li><span>Usage of catalyst = Rate+ (At optimum temperature for the specific catalyst)</span>
-<span>Redox reactions</span></li></ul></li><li><p><span>Oxidation = gain of oxygen = loss of election</span></p></li><li><p><span>Reduction = loss of oxygen = gain of electron</span></p></li><li><p><strong><em><span>OILRIG</span></em></strong><span> (Oxidation is loss of electron, Reduction is gain of electron)</span></p></li><li><p><span>Reducing and Oxidizing agents</span></p><ul><li><span>Reducing agents are simply molecule that’s been though reduction during the reaction</span></li><li><span>Same applies for Oxidizing agent</span></li></ul></li></ul><h2 id="C8">C8 Acid Bases and Salts</h2><p><strong><span>Acid and Bases are chemical opposite</span></strong>
-<span>	</span></p><ul><li><p><strong><span>Definition of acid and bases</span></strong></p><ul><li><p><strong><em><span>Acids are proton (hydrogen ion) donor, and bases are proton(hydrogen ion) acceptor</span></em></strong></p><ul><li><span>Acid give out hydrogen ions in reactions</span></li><li><span>Base takes hydrogen ions in reactions</span></li></ul></li></ul></li><li><p><strong><span>pH level</span></strong></p><ul><li><p><span>pH level: A property of substances that is represented by integers 0-14</span></p></li><li><p><span>Lower the pH level, more acidic a substance is</span></p></li><li><p><span>Higher the pH level, more basic it is</span></p></li><li><p><span>Alkaline</span></p></li><li><p><span>If a base dissolves in water, then its alkaline</span></p><ul><li><span>Alkaline is a category of base substances</span></li><li><span>Therefore, a alkaline is always base, a base could be alkaline</span>
-<span>Indicators</span></li></ul></li><li><p><span>pH levels could be tested with different indicators</span></p><figure><table><thead><tr><th>&nbsp;</th><th><span>indication of acid</span></th><th><span>Indication of base</span></th></tr></thead><tbody><tr><td><span> </span><strong><span>Litmus</span></strong><span>                    </span></td><td><span> red                                   </span></td><td><span> blue                                   </span></td></tr><tr><td><span> </span><strong><span>Methyl Orange</span></strong><span>             </span></td><td><span> red                                   </span></td><td><span> yellow                                 </span></td></tr><tr><td><span> </span><strong><span>Universal Indicator Paper</span></strong><span> </span></td><td><span> </span><strong><em><span>strong:</span></em></strong><span> red, </span><strong><em><span>weak:</span></em></strong><span> yellow </span></td><td><span> </span><strong><em><span>strong:</span></em></strong><span> purple, </span><strong><em><span>weak:</span></em></strong><span> blue </span></td></tr><tr><td><span> </span><strong><span>Phenolphthalein</span></strong><span>           </span></td><td><span> colorless                             </span></td><td><span> pink                                   </span></td></tr></tbody></table></figure></li></ul></li><li><p><strong><span>Reaction of acid and bases</span></strong></p><ul><li><span>Salt: ionic compounds made of positive ion and negative ions (???)</span></li><li><span>Acid + metal </span>&rarr;<span> salt + hydrogen</span></li><li><span>Acid + metal oxide(base) -&gt; salt + water (neutralization: two chemical opposite, acid and base reacts together to form products with neutral pH level)</span></li><li><span>Acid + metal hydroxide(base) </span>&rarr;<span> salt + water (neutralization)</span></li><li><span>Acid + ammonia solution(base) </span>&rarr;<span> salt + water (neutralization)</span></li><li><span>Acid + Metal carbonate </span>&rarr;<span> salt + carbon dioxide + water</span></li></ul></li><li><p><strong><span>Types of oxides</span></strong></p><ul><li><span>Basic oxides / metallic oxides, oxides with metal, and are basic, duh (CaO, MgO)</span></li><li><span>Acidic oxides, oxides with non-metal, and are acidic (SO2)</span></li><li><span>Neutral oxides (Carbon monoxides, dinitrogen oxide, nitrous oxide, nitrogen monoxide)</span></li><li><span>Amphoteric oxide, oxides that could act as both acid and base</span></li></ul></li><li><p><strong><span>Preparation of salts</span></strong></p><ul><li><p><span>General Procedure / method</span></p><ol start='' ><li><span>Warm the acid to speed the reaction</span></li><li><span>Add metal, metal oxide or metal carbonate in while stirring the acid</span></li><li><span>Filter the mixture to remove extra solid materials</span></li><li><span>Pour the leftovers into evaporating dishes and heat, stop once the crystal started to form</span></li><li><span>Cool it down</span></li><li><span>Filter to retrieve the crystals from the liquid</span></li><li><span>And there is your salts.</span></li></ol></li></ul></li><li><p><strong><span>Identifications of ions and gases</span></strong></p><ul><li><p><span>Testing for aqueous cations</span></p><figure><table><thead><tr><th><span>Cation</span></th><th><span>Effect of a.q. Sodium Hydroxide</span></th><th><span>Effect of a.q. Ammonia</span></th></tr></thead><tbody><tr><td><span>Ammonium, NH</span><sub><span>4</span></sub><sup><span>+</span></sup></td><td><span>Ammonia gas is produced when heated; turns from red to litmus to blue</span></td><td><span>-----</span></td></tr><tr><td><span>Calcium, Ca</span><sup><span>2+</span></sup></td><td><span>While precipitation is formed, insoluble</span></td><td><span>No precipitation</span></td></tr><tr><td><span>Copper(II), Cu</span><sup><span>2+</span></sup></td><td><span>Light blue precipitation, insoluble</span></td><td><span>Light blue precipitation, soluble</span></td></tr><tr><td><span>Iron(II), Fe</span><sup><span>2+</span></sup></td><td><span>Green precipitation, insoluble</span></td><td><span>Green precipitation, insoluble</span></td></tr><tr><td><span>Iron(III), Fe</span><sup><span>3+</span></sup></td><td><span>Red-brown precipitation, insoluble</span></td><td><span>Red-brown precipitation, insoluble</span></td></tr><tr><td><span>Zinc(II), Zn</span><sup><span>2+</span></sup></td><td><span>White precipitation, soluble, dissolving yields a colorless solution</span></td><td><span>White precipitation, soluble, dissolving yields a colorless solution</span></td></tr></tbody></table></figure><p>&nbsp;</p></li><li><p><span>Flame tests for cations</span></p><figure><table><thead><tr><th><span>Metal Ions</span></th><th><span>Color When burnt</span></th></tr></thead><tbody><tr><td><span>Lithium, Li</span><sup><span>+</span></sup></td><td><span>Red</span></td></tr><tr><td><span>Sodium, Na</span><sup><span>+</span></sup></td><td><span>Yellow</span></td></tr><tr><td><span>Potassium, K</span><sup><span>+</span></sup></td><td><span>Lilac, Light Purple</span></td></tr><tr><td><span>Copper(II), Cu</span><sup><span>2+</span></sup></td><td><span>Blue-Green</span></td></tr></tbody></table></figure><p>&nbsp;</p></li></ul></li></ul><h2 id="C14">C14 Organic Chemistry</h2><ul><li><p><strong><span>Names of compounds</span></strong></p><ul><li><p><strong><span>Alkane</span></strong></p><ul><li><span>Alkane features a single bond between carbons</span></li><li><span>Its functional group is Carbon</span></li><li><span>Each side of carbon is bonded with hydrogen</span></li><li><span>Therefore alkane is saturated, meaning that the compound is hard to be broken down</span></li></ul></li><li><p><strong><span>Alkene</span></strong></p><ul><li><span>Alkene features a double bond between carbons</span></li><li><span>Since it needs to have a double bond between carbons, there is no &quot;methene&quot; (one carbon alkene)</span></li><li><span>Functional group is still Carbon</span></li><li><span>Alkene is not saturated because of the double bond</span></li></ul></li><li><p><strong><span>Alcohol</span></strong></p><ul><li><span>Alcohol features single bonds between carbons, but have one OH as a functional group</span></li></ul></li><li><p><span>Prefixes (you only need to memorize the first four actually)</span></p><figure><table><thead><tr><th><span>Prefix</span></th><th><span>Number of carbons</span></th></tr></thead><tbody><tr><td><span>Meth-</span></td><td><span>1</span></td></tr><tr><td><span>Eth-</span></td><td><span>2</span></td></tr><tr><td><span>Prop-</span></td><td><span>3</span></td></tr><tr><td><span>But-</span></td><td><span>4</span></td></tr><tr><td><span>Penta-</span></td><td><span>5</span></td></tr><tr><td><span>Hex-</span></td><td><span>6</span></td></tr><tr><td><span>Hept-</span></td><td><span>7</span></td></tr><tr><td><span>Octa-</span></td><td><span>8</span></td></tr><tr><td><span>Dec-</span></td><td><span>9</span></td></tr><tr><td><span>Dodec-</span></td><td><span>10</span></td></tr></tbody></table></figure></li></ul></li><li><p><strong><span>Fuel</span></strong></p><ul><li><p><span>Types of fuels</span></p><ul><li><p><span>Coal</span></p></li><li><p><span>Natural gas</span></p><ul><li><p><span>Natural gas is mainly methane</span></p></li><li><p><span>Equation for the combustion of Natural Gas:</span></p><ul><li><span>Methane + Oxygen </span>&rarr;<span> Carbon Dioxide + Water</span></li></ul></li></ul></li><li><p><span>Petroleum</span></p><ul><li><p><span>Fractional Distillation</span></p><blockquote><p><span>Petroleum, crude oil, consists of different compounds, organic compound-Hydrocarbon, 30% of alkanes, with the remainder of other compounds, this mixture of all those compounds altogether could not be effectively utilized, therefore a separation technique that will separate the crude oil into pure substances, called Fractional Distillation is invented</span></p></blockquote><ul><li><p><span>The process of Fractional Distillation: </span></p><ul><li><span>Crude oil is boiled then released into the distillation tower</span></li><li><span>The temperature have a decreasing trend going up the tower</span></li><li><span>Each temperature point have a layer of condensing surfaces,</span></li><li><span>Where the temperature of the material drops below its boiling point and the material is condensed into liquids</span></li><li><span>The leftover material which have a slightly lower boiling point continue to flow upwards to the colder area to be condensed</span></li><li><span>This separates the substances by their boiling points</span></li></ul></li><li><p><span>Products</span></p><ul><li><span>350C - 600C Bitumen (used for roads and roofing)</span></li><li><span>250C - 350C Diesel fuels (for trucks that have diesel engine)</span></li><li><span>60C - 100C Random chemicals (Naphtha for example, are used as base for many chemicals</span></li><li><span>40C - 100C Petrol (gasoline)</span></li><li><span>&lt;40C Gas </span></li></ul></li></ul></li></ul></li></ul></li></ul></li><li><p><strong><span>Homologous series</span></strong></p><ul><li><span>Homologous series is a series of compound that have similar chemical properties but each differs from each other from addition of more functional groups.</span></li><li><span>General formula of a typical homologous series: </span><strong><span>Alkanes:</span></strong><span>  C</span><sub><span>n</span></sub><span>H</span><sub><span>2n+2</span></sub></li></ul></li><li><p><strong><span>Alkanes</span></strong></p><ul><li><p><span>Alkane is a common hydrocarbon, the chain length differs its usage, its mainly used for fuels</span></p></li><li><p><span>Trend of properties in the series</span></p><ul><li><p><span>Going up the series (Meth-Eth-Pro)</span></p><ul><li><span>Chain length+, Numbers on carbon+</span></li><li><span>Boiling point+, since the molecular mass is higher going up the series</span></li><li><span>Physical state: From gas to liquid cuz duh</span></li></ul></li></ul></li><li><p><span>Alkanes is strong since its mainly composed of C-H covalent bonds, but it still undergoes combustion</span></p><blockquote><p><span>Methane + 2O</span><sub><span>2</span></sub><span> </span>&rarr;<span> CO</span><sub><span>2</span></sub><span> + 2H</span><sub><span>2</span></sub><span>O (exothermic)</span></p></blockquote></li><li><p><span>Again, bonds are strong in alkanes compounds, meaning this type on compound is saturated, Each molecules are bond by single bonds</span></p></li></ul></li><li><p><strong><span>Cracking</span></strong></p><ul><li><span>Heating Ethane would break Ethane down to Ethene and Hydrogen</span></li><li><span>However, since the C-H covalent bond is a strong bond, it would require massive amount of thermal energy to break it down</span></li><li><span>Heating to high temperatures are often expensive, therefore an alternative approach is Catalytic cracking, instead of heating Ethane to 800C, adding aluminum as a catalyst could allow cracking at only 500C</span></li><li><span>Heating cracking and Catalytic cracking are used for different scenarios, Heating cracking are often used in long chains of alkanes</span></li></ul></li><li><p><span>Saturation</span></p><ul><li><span>Alkenes are unsaturated because of the double bond, its likely to react with halogens, we could utilize this property to test for test for the existence of alkene, when alkene is reacted with Bromide(common halogen), it turns from a brown solution to colorless solution</span></li></ul></li><li><p><strong><span>Alcohol</span></strong></p><ul><li><p><span>Fermentation</span></p><ul><li><p><span>Fermentation is the process of making alcohol by breaking down glucose with yeast</span></p><blockquote><p><span>Glucose </span>&rarr;<span> ethanol + carbon dioxide</span></p></blockquote></li></ul></li><li><p><span>Hydration of ethene</span></p><ul><li><span>C</span><sub><span>2</span></sub><span>H</span><sub><span>4</span></sub><span> +  H</span><sub><span>2</span></sub><span>O </span>&rarr;<span> C</span><sub><span>2</span></sub><span>H</span><sub><span>5</span></sub><span>OH</span></li><li><span>Ethene + water </span>&rarr;<span> Ethanol</span></li></ul></li><li><p><span>Properties of ethanol</span></p><ul><li><span>Ethanol is small and light molecules that’s liquid at room temp. easy to evaporate and highly flammable and ignited at temperature lower than room temp. combusts with oxygen</span></li></ul></li><li><p><span>Use of ethanol</span></p><ul><li><span>Ethanol is only toxic at large scale consumption, and its highly volatility, therefore its used as solvents for cosmetics and perfumes</span></li><li><span>Ethanol could also be used as fuels, leftover crops could be processed to produce ethanol</span></li></ul></li></ul></li><li><p><strong><span>Polymers</span></strong></p><ul><li><p><span>Single unit of substance = monomer</span></p></li><li><p><span>Multiple units joined together = polymer</span></p></li><li><p><span>Common polymers</span></p><ul><li><p><span>PVC</span></p><ul><li><span>Series of polyvinyl chloride</span></li></ul></li><li><p><span>Starch</span></p><ul><li><span>Series of glucose</span></li></ul></li></ul></li></ul></li><li><p><strong><span>Synthetic polymers</span></strong></p><ul><li><p><span>Manufacture of polythene</span></p><ul><li><span>Alkenes are important in the manufactures of polythene because its unsaturated and easy to bond with other molecules</span></li></ul></li></ul></li></ul><h2 id="P4">P4 Properties of waves (light and sound)</h2><ul><li><p><strong><span>What r waves?</span></strong></p><ul><li><p><span>Center: source of disturbance </span></p></li><li><p><span>Peak of waves: crest</span></p></li><li><p><span>Low point of waves: trough</span></p></li><li><p><span>Types of wave</span></p><ul><li><span>Transverse - up and down</span></li><li><span>Longitudinal - back and forth</span></li></ul></li><li><p><span>Wavelength</span></p><ul><li><span>the distance between two crests or two trough or any two equally spaced points on two cycles of wave</span></li></ul></li><li><p><span>Frequency</span></p><ul><li><span>number of complete wave pass one point each second = numbers of waves / time</span></li></ul></li><li><p><span>Wave speed</span></p><ul><li><span>wavelength * frequency</span></li></ul></li><li><p><span>Reflection of wave</span></p><ul><li><span>angle of incidence = angle of reflection</span></li></ul></li><li><p><span>Refractive index</span></p><ul><li><p><span>When a wave enters a denser medium it slows down, and the wave is diverted towards the normal</span></p></li><li><p><span>When a wave enters a less dense medium it speeds up, and the wave is diverted away from the normal</span></p></li><li><p><span>Refractive index is the ratio of speed of light in vacuum and speed of light in a medium</span></p><ul><li><span>Therefore, Refractive index = speed of light in vacuum / speed of light in a medium</span></li><li><span>Also, Refractive index = sin(angle of incidence) / sin(angle of refraction)</span></li></ul></li><li><p><span>Total internal reflection</span></p><ul><li><p><span>Critical angle</span></p><ul><li><span>If the angle of incidence is larger than the critical angle, then the light penetrates the surface it hits on, otherwise its completely reflected</span></li></ul></li><li><p><span>Formulas</span></p><ul><li><span>R = Refractive Index</span></li><li><span>C = Critical Angle</span></li></ul><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block md-math-block md-rawblock" id="mathjax-n16705" cid="n16705" mdtype="math_block"><div class="md-rawblock-container md-math-container" tabindex="-1"><div class="MathJax_SVG_Display" style="text-align: center;"><span class="MathJax_SVG" id="MathJax-Element-65-Frame" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.862ex" height="5.612ex" viewBox="0 -1459.5 5537.6 2416.4" role="img" focusable="false" style="vertical-align: -2.1ex; margin-bottom: -0.123ex; max-width: 100%;"><defs><path stroke-width="0" id="E694-MJMATHI-52" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z"></path><path stroke-width="0" id="E694-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path stroke-width="0" id="E694-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="0" id="E694-MJMAIN-73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z"></path><path stroke-width="0" id="E694-MJMAIN-69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z"></path><path stroke-width="0" id="E694-MJMAIN-6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z"></path><path stroke-width="0" id="E694-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E694-MJMATHI-43" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path><path stroke-width="0" id="E694-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g transform="translate(167,0)"><g transform="translate(-15,0)"><g transform="translate(0,61)"><use xlink:href="#E694-MJMATHI-52" x="0" y="0"></use><use xlink:href="#E694-MJMAIN-3D" x="1036" y="0"></use><g transform="translate(1814,0)"><g transform="translate(397,0)"><rect stroke="none" width="2886" height="60" x="0" y="220"></rect><use xlink:href="#E694-MJMAIN-31" x="1193" y="676"></use><g transform="translate(60,-716)"><use xlink:href="#E694-MJMAIN-73"></use><use xlink:href="#E694-MJMAIN-69" x="394" y="0"></use><use xlink:href="#E694-MJMAIN-6E" x="672" y="0"></use><use xlink:href="#E694-MJMAIN-28" x="1228" y="0"></use><use xlink:href="#E694-MJMATHI-43" x="1617" y="0"></use><use xlink:href="#E694-MJMAIN-29" x="2377" y="0"></use></g></g></g></g></g></g></g></svg></span></div><script type="math/tex; mode=display" id="MathJax-Element-65">\begin{align*}
-R = \frac{1} {\sin(C)} \\
-\end{align*}</script></div></div><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block md-math-block md-rawblock" id="mathjax-n16706" cid="n16706" mdtype="math_block"><div class="md-rawblock-container md-math-container" tabindex="-1"><div class="MathJax_SVG_Display" style="text-align: center;"><span class="MathJax_SVG" id="MathJax-Element-66-Frame" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.965ex" height="5.145ex" viewBox="0 -1359 6873.6 2215.4" role="img" focusable="false" style="vertical-align: -1.799ex; margin-bottom: -0.19ex; max-width: 100%;"><defs><path stroke-width="0" id="E695-MJMATHI-43" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path><path stroke-width="0" id="E695-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path stroke-width="0" id="E695-MJMAIN-61" d="M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z"></path><path stroke-width="0" id="E695-MJMAIN-72" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T98 122T98 161T98 203Q98 234 98 269T98 328L97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 60 434T96 436Q112 437 131 438T160 441T171 442H174V373Q213 441 271 441H277Q322 441 343 419T364 373Q364 352 351 337T313 322Q288 322 276 338T263 372Q263 381 265 388T270 400T273 405Q271 407 250 401Q234 393 226 386Q179 341 179 207V154Q179 141 179 127T179 101T180 81T180 66V61Q181 59 183 57T188 54T193 51T200 49T207 48T216 47T225 47T235 46T245 46H276V0H267Q249 3 140 3Q37 3 28 0H20V46H36Z"></path><path stroke-width="0" id="E695-MJMAIN-63" d="M370 305T349 305T313 320T297 358Q297 381 312 396Q317 401 317 402T307 404Q281 408 258 408Q209 408 178 376Q131 329 131 219Q131 137 162 90Q203 29 272 29Q313 29 338 55T374 117Q376 125 379 127T395 129H409Q415 123 415 120Q415 116 411 104T395 71T366 33T318 2T249 -11Q163 -11 99 53T34 214Q34 318 99 383T250 448T370 421T404 357Q404 334 387 320Z"></path><path stroke-width="0" id="E695-MJMAIN-73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z"></path><path stroke-width="0" id="E695-MJMAIN-69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z"></path><path stroke-width="0" id="E695-MJMAIN-6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z"></path><path stroke-width="0" id="E695-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E695-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="0" id="E695-MJMATHI-52" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z"></path><path stroke-width="0" id="E695-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g transform="translate(167,0)"><g transform="translate(-15,0)"><g transform="translate(0,-68)"><use xlink:href="#E695-MJMATHI-43" x="0" y="0"></use><use xlink:href="#E695-MJMAIN-3D" x="1037" y="0"></use><g transform="translate(2093,0)"><use xlink:href="#E695-MJMAIN-61"></use><use xlink:href="#E695-MJMAIN-72" x="500" y="0"></use><use xlink:href="#E695-MJMAIN-63" x="892" y="0"></use><use xlink:href="#E695-MJMAIN-73" x="1336" y="0"></use><use xlink:href="#E695-MJMAIN-69" x="1730" y="0"></use><use xlink:href="#E695-MJMAIN-6E" x="2008" y="0"></use></g><use xlink:href="#E695-MJMAIN-28" x="4657" y="0"></use><g transform="translate(5046,0)"><g transform="translate(120,0)"><rect stroke="none" width="879" height="60" x="0" y="220"></rect><use xlink:href="#E695-MJMAIN-31" x="189" y="676"></use><use xlink:href="#E695-MJMATHI-52" x="60" y="-686"></use></g></g><use xlink:href="#E695-MJMAIN-29" x="6165" y="0"></use></g></g></g></g></svg></span></div><script type="math/tex; mode=display" id="MathJax-Element-66">\begin{align*}
-C = \arcsin(\frac{1} {R})
-\end{align*}</script></div></div></li></ul></li><li><p><span>Ray graphing</span></p><ul><li><p><span>Optical axis</span></p><ul><li><span>The line on the graph that represents the path of a ray</span></li></ul></li><li><p><span>Principal focus</span></p><ul><li><span>The point of intersection of rays refracted by converging lens</span></li></ul></li><li><p><span>Focal length</span></p><ul><li><span>The distance of the center of the lens to the principal focus point</span></li></ul></li></ul></li></ul></li></ul></li><li><p><strong><span>EM Waves</span></strong></p><ul><li><p><span>Order of spectrum (Long Wave len. </span>&rarr;<span> Short Wave len.)</span></p><ul><li><p><span>Radiowave</span></p><ul><li><span>Can be send over great distance</span></li><li><span>Refracted back on the top of the atmosphere so it actually travels thru the curvature of the earth</span></li></ul></li><li><p><span>Microwave</span></p><ul><li><span>Are absorbed by materials within foods and organisms, creating a heating effect</span></li></ul></li><li><p><span>Infra-red</span></p><ul><li><span>Are released more by things with higher temperature, so its used to detect heat</span></li></ul></li><li><p><span>Visible light</span></p><ul><li><span>Red</span></li><li><span>Orange</span></li><li><span>Yellow</span></li><li><span>Green</span></li><li><span>Cyan</span></li><li><span>Blue</span></li><li><span>Violet</span></li></ul></li><li><p><span>Ultra-violet</span></p></li><li><p><span>X-rays</span></p></li><li><p><span>Gamma rays</span><span>		</span></p></li></ul></li></ul></li><li><p><strong><span>Sound wave</span></strong></p><ul><li><span>Faster vibration = increased frequency = increased pitch</span></li><li><span>Larger vibration = increased amplitude = increased loudness</span></li></ul></li></ul><hr /><h6><a name="igcse-is-a-trademark-of-cambridge-education-this-site-is-not-part-of-cambridge-education-nor-is-this-site-associated-with-cambridge-education" class="md-header-anchor"></a><span>IGCSE is a trademark of Cambridge Education, This site is not part of Cambridge Education, nor is this site associated with Cambridge Education.</span></h6><h6><a name="this-site-is-for-educational-purposes-only" class="md-header-anchor"></a><span>This site is for educational purposes only.</span></h6></div>
+
+<body>
+
+<h1 id="toc_0">IGCSE Coordinated Science Decompiled</h1>
+
+<hr>
+
+<h5 id="toc_1">The purpose of this site is to condense every bits of knowledge covered by ICGSE Science into its simplest form for exam preps.</h5>
+
+<h6 id="toc_2">Could be missing something but I&#39;m pretty sure 95% of stuff is included</h6>
+
+<h6 id="toc_3">Since all the information here is simplified, it would only be ideal to use as revision material to memorize key points and all that, if you didn&#39;t learn very much in the past two years, go to <a href="https://kognity.com">Kognity</a> and start over lmao.</h6>
+
+<div><pre><code class="language-none">Estimated reading time: 20 minutes
+Pls shut up grammar police</code></pre></div>
+
+<h1 id="toc_4">Topic Checklist:</h1>
+
+<hr>
+
+<h6 id="toc_5">Scroll down, or use links below to redirect yourself</h6>
+
+<h6 id="toc_6">Use Ctrl/Command + F to search for keywords</h6>
+
+<h2 id="toc_7">1. Biology</h2>
+
+<blockquote>
+<ul>
+<li><a href="#B1">B1 Characteristics of living organisms</a></li>
+<li><a href="#B2">B2 Cells</a></li>
+<li><a href="#B3">B3 Biological molecules</a></li>
+<li><a href="#B4">B4 Enzymes</a></li>
+<li><a href="#B5">B5 Plant nutrition</a></li>
+<li><a href="#B6">B6 Animal nutrition</a></li>
+<li><a href="#B7">B7 Transport</a></li>
+<li><a href="#B8">B8 Gas exchange and respiration</a></li>
+<li><a href="#B9">B9 Coordination and response</a></li>
+<li><a href="#B10">B10 Reproduction</a></li>
+<li><a href="#B11">B11 Inheritance</a></li>
+<li><a href="#B12">B12 Organisms and their environment</a></li>
+<li><a href="#B13">B13 Human impact on the ecosystem</a></li>
+</ul>
+</blockquote>
+
+<h2 id="toc_8">2. Chemistry</h2>
+
+<blockquote>
+<ul>
+<li><a href="#C1">C1 The particulate nature of matter</a></li>
+<li><a href="#C2">C2 Experimental techniques</a></li>
+<li><a href="#C3">C3 Atoms, elements and compounds</a></li>
+<li><a href="#C4">C4 Stoichiometry</a></li>
+<li><a href="#C5">C5 Electricity and chemistry</a></li>
+<li><a href="#C6">C6 Energy changes in chemical reactions</a></li>
+<li><a href="#C7">C7 Chemical reactions</a></li>
+<li><a href="#C8">C8 Acids, bases and salts</a></li>
+<li><a href="#C9">C9 The periodic table</a></li>
+<li><a href="#C10">C10 Metals</a></li>
+<li><a href="#C11">C11 Air and water</a></li>
+<li><a href="#C12">C12 Sulfur</a></li>
+<li><a href="#C13">C13 Carbonates</a></li>
+<li><a href="#C14">C14 Organic chemistry</a></li>
+</ul>
+</blockquote>
+
+<h2 id="toc_9">3. Physics</h2>
+
+<blockquote>
+<ul>
+<li> <a href="#P1">P1 motion</a></li>
+<li> <a href="#P2">P2 Work, energy and power</a></li>
+<li> <a href="#P3">P3 Thermal Physics</a></li>
+<li> <a href="#P4">P4 Properties of waves, including light and sound</a></li>
+<li> <a href="#P5">P5 Electricity and magnetism</a></li>
+<li> <a href="#P6">P6 Electric circuits</a></li>
+<li><a href="#P7"> P7 Electromagnetic effects</a></li>
+<li> <a href="#P8">P8 Atomic physics</a></li>
+</ul>
+</blockquote>
+
+<div style="height: 10px;"> </div>
+
+<hr>
+
+<div style="height: 100px;"> </div>
+
+<h2 id="B1">B1 Characteristics of living organisms</h2>
+
+<ul>
+<li><p><strong>The seven characteristics of living organism</strong></p>
+
+<ol>
+<li>Movement</li>
+<li>Growth</li>
+<li>Sensitivity</li>
+<li>Reproduction</li>
+<li>Excretion</li>
+<li>Nutrition</li>
+<li>Respiration</li>
+</ol></li>
+<li><p><strong>Extended Stuff:</strong></p>
+
+<ul>
+<li><strong>Metabolism:</strong> Refers to all the chemical reactions within the organism.</li>
+<li><strong>Autotroph:</strong> Organisms that make their own food (Producers).</li>
+<li><strong>Heterotroph</strong>: Organisms that relies on other organisms for food (Consumers).</li>
+</ul></li>
+</ul>
+
+<h2 id="B2">B2 Cells</h2>
+
+<ol>
+<li> <strong>Cell Structure</strong>
+
+<ul>
+<li>Cell organelles
+
+<ul>
+<li>Cytoplasm</li>
+<li>Nucleus</li>
+<li>Cell membrane</li>
+<li>Endoplasmic reticulum - for transports, like diffusion, osmosis, and the synthesis of lipids </li>
+<li>Golgi body - packing and sending macromolecules outside of the cell</li>
+<li>Mitochondria - supply and storage of energy for the cell</li>
+<li>Ribosomes - site of protein synthesis 
+Plant cells exclusive organs</li>
+<li>Cell wall</li>
+<li>Central vacuole</li>
+<li>Chloroplasts</li>
+</ul></li>
+<li>Specialized cells
+
+<ul>
+<li>Root hair cell (absorbing water and nutrients from the ground)</li>
+<li>Palisade mesophyll (photosynthesis)</li>
+<li>Red blood cell</li>
+<li>Egg, sperm
+Magnification</li>
+<li>Magnification = Size of magnified image/Size of actual image</li>
+</ul></li>
+</ul></li>
+<li><strong>Movement in and out of the cell</strong><br>
+Diffusion: movement of particles from higher concentration (area with more particles) to lower concentration (area with less particles)
+Osmosis: diffusion of water molecules</li>
+</ol>
+
+<h2 id="B3">B3 Biomolecules</h2>
+
+<p>Biomolecules is simply <strong>organic molecules</strong> found in living organisms</p>
+
+<p><strong>What is organic compound?</strong></p>
+
+<blockquote>
+<p>Organic compounds is compounds containing carbon, but <strong>not</strong> carbonate or carbon oxides.</p>
+</blockquote>
+
+<p>Biomolecules are usually polymers: large molecules in chain<br>
+Monomer: single units that composes the larger polymer</p>
+
+<ul>
+<li><p>Usual functionality of biomolecules:</p>
+
+<ol>
+<li>Providing energy</li>
+<li>Storing information (DNA and RNA)</li>
+<li>Acting as catalysts (basically enzymes)</li>
+</ol></li>
+<li><p>Reactions of biomolecules:</p>
+
+<ol>
+<li>Condensation
+    Two or more monomers reacts and forms covalent bond together with water, forming a polymer</li>
+<li>Hydrolysis
+    Covalent bond of hydrated polymer is broken into two monomers, each bonding with a OH</li>
+</ol></li>
+</ul>
+
+<p><strong>Typical biomolecules:</strong> Carbohydrates, Fats, Protein<br>
+All composed of C,H,O,N,P</p>
+
+<ul>
+<li><p><strong>Typical biomolecules - Carbs</strong></p>
+
+<ol>
+<li>Monosaccharide- Glucose and fructose</li>
+<li>Disaccharide- maltose found in malt in seeds and digestion, lactose from milk and sucrose found in plants for transport</li>
+<li>Polysaccharide- starch found in plants and glycogen found in animals livers and muscles</li>
+</ol></li>
+<li><p><strong>Typical biomolecules - Fats and oil</strong></p>
+
+<ol>
+<li>Fats and oil is composed of <strong>Glycerol</strong> and <strong>fatty acids</strong></li>
+<li>Fats and oil contains twice as much energy as carbohydrates does
+Fats and oil are triglycerides
+Fats comes from animal, while oil comes from plants</li>
+</ol></li>
+<li><p><strong>Typical biomolecules - Proteins</strong></p>
+
+<ol>
+<li>Proteins are composed of C,H,O and amino group and carboxyl group</li>
+<li>Proteins are a varied group</li>
+<li>Enzymes are also proteins</li>
+<li>Long chains of amino acids are called polypeptides</li>
+<li>Contains phosphorus (P) </li>
+</ol></li>
+<li><p><strong>Testing for biomolecules</strong></p>
+
+<ol>
+<li>Testing for <strong>reduced sugar</strong>
+
+<ul>
+<li>Testing for reduced sugar uses benedict&#39;s solution</li>
+<li>Benedicts solution turns from blue to red when testing for reducing sugar</li>
+<li>Change of color of Benedict solution: Blue -&gt; green -&gt; yellow -&gt; orange -&gt; red</li>
+</ul></li>
+<li>Testing for <strong>starch</strong>
+
+<ul>
+<li>Testing for starch uses iodine solution</li>
+<li>If starch is present, the solution turns dark blue, otherwise it remains orange-brown</li>
+</ul></li>
+<li>Testing for <strong>fats and oils</strong>
+
+<ul>
+<li>Testing for fats and oils uses ethanol</li>
+<li>Turns transparent when fat or oil is present, otherwise remain transparent</li>
+</ul></li>
+<li>Testing for <strong>protein</strong>
+
+<ul>
+<li>Testing for protein uses biuret</li>
+<li>If protein present, solution turns purple, otherwise remain blue</li>
+</ul></li>
+</ol></li>
+</ul>
+
+<h2 id="B4">B4 Enzymes</h2>
+
+<p>Enzyme is a biological catalyst, it speeds up some reaction, its protein, therefore it would be denatured at high temperature, and denaturation is permanent.</p>
+
+<p>The shape of enzyme fits the reactant, since it have to fit the reactant, it has an <strong>active site</strong>, which is the only side that could adapt to and fits the reactant.</p>
+
+<ul>
+<li><strong>Optimum temperature for enzyme activity:</strong></li>
+</ul>
+
+<p><img src="https://kognity-prod.imgix.net/media/edusys_2/content_uploads/aw-05_aw12.15b9eda331a06af02c83.png?w=1000&auto=compress"></p>
+
+<ul>
+<li><p><strong>Optimum pH level for enzymes is another story</strong></p>
+
+<p>Its different for every enzymes</p></li>
+</ul>
+
+<h2 id="B5">B5 Plant Nutrition</h2>
+
+<ul>
+<li><p><strong>Photosynthesis</strong></p>
+
+<ul>
+<li>Photosynthesis is the primary source of energy for plants, it takes carbon dioxide and water and light to make glucose and oxygen as a biproduct</li>
+<li>Photosynthesis is done in chlorophyll in plant cells</li>
+<li><p>Adaptation characteristics of plants for photosynthesis:</p>
+
+<ol>
+<li>Thin leaves: allow chlorophyll to absorb more lights, and diffusion distance of CO2 made short</li>
+<li>Large surface area for leaf: allow the plants to take in more sunlight and CO2</li>
+<li>Stomata: entrance and exit for CO2 and oxygen</li>
+<li>Xylem and phloem: supply water to cells and transport products of photosynthesis</li>
+<li>Stem and leaf stalks: hold leaves at the right angle to absorb as much sunlight as possible</li>
+<li>Large surface area of root hair cells: larger surface to absorb more nutrients in soil</li>
+</ol></li>
+<li><p>Different chemical energy form in plants:</p>
+
+<ul>
+<li>Sucrose for transportation of energy within plants, starch for storage of energy within plants</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Leaf Structure</strong></p>
+
+<ul>
+<li><strong>Parts:</strong>
+
+<ul>
+<li>Chloroplasts: Located on the upper part  Contain chlorophylls for photosynthesis</li>
+<li>Waxy cuticle: Located on the top part of the leaf, stops water from evaporating from the top</li>
+<li>Stomata: Small openings located under the leaf</li>
+<li>Upper and lower epidermis: inner layer of cells, upper epidermis doesn’t contain chloroplast, lower epidermis do contain chloroplast</li>
+<li>Palisade mesophyll: Upper layer of closed packed cells that have large amount of chloroplast</li>
+<li>Spongy mesophyll:  middle layer of cells that are loosely spaced that allows diffusion of gases</li>
+<li>Xylem: Carries water from roots to the leaves</li>
+<li>Phloem: Carries sucrose away from the leaf</li>
+<li>Vascular bundles: Contains xylem and phloem cells, located within the spongy mesophyll</li>
+</ul></li>
+</ul></li>
+<li><p><strong>The roles and importance of minerals</strong></p>
+
+<ul>
+<li><strong>Nitrate</strong> and <strong>Magnesium</strong> ions are absorbed into the plants from the soil
+
+<ul>
+<li>Nitrates contains nitrogen, essential for composing amino acids, and producing proteins, which is vital for plants</li>
+<li>Magnesium is essential for the synthesis of chlorophyll, therefore its important for plants</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="B6">B6 Animal Nutrition</h2>
+
+<ul>
+<li><strong>Types of animal / human nutrition</strong>
+
+<ul>
+<li>Carbs - short term energy supply</li>
+<li>Proteins - building blocks, used for repair and growth of body</li>
+<li>Fats - long term storage of energy, fat contains two times the energy comparing to the same amount of carbs</li>
+<li>Vitamin C - growth and repair</li>
+<li>Vitamin D - absorption of calcium</li>
+<li>Calcium - strengthen bones and teeth, helps with muscle contraction and nerve transmission</li>
+<li>Iron - Production of RBC</li>
+<li>Water - transports thought the body, made up 60% of human body</li>
+</ul></li>
+</ul>
+
+<h2 id="B7">B7.1 Transports in Plants</h2>
+
+<ol>
+<li><p><strong>Water</strong></p>
+
+<ul>
+<li>Xylem in plants is for transporting water in plants, it also supports the stem of the plants, xylem are made of lignin, which is very strong
+Root hair cells have large surface area to take in water and minerals from soil</li>
+<li>Transpiration
+
+<ul>
+<li>Plant lose water by evaporation, the evaporated water is released from the stomata</li>
+<li>Plant leaves have large area, allowing the water in mesophyll to be evaporated</li>
+<li>The interconnecting air spaces creates an concentration gradient</li>
+<li>There are many stomata for water to diffuse out of the leaf</li>
+<li><strong>Rate of transpiration is affected by:</strong>
+
+<ul>
+<li>Temperature</li>
+<li>Humidity(if the water potential outside the plant are already high, osmosis wont move water outward)</li>
+<li>Wind speed</li>
+<li>Light intensity</li>
+<li>Water supply</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ol>
+
+<h2 id="toc_10">B7.2 Transports in Animals</h2>
+
+<ul>
+<li><p><strong>Cardiovascular system</strong></p>
+
+<ul>
+<li>Three types of blood vessels</li>
+<li>Artery: carries oxygenated blood</li>
+<li>Vein: carries deoxygenated blood</li>
+<li>Capillary: small vessels delivering blood to body tissues</li>
+<li>Artery vs Vein
+
+<ul>
+<li>Artery have thick and smooth wall, blood pressure in artery is higher than pressure in vein</li>
+<li>Vein&#39;s wall are thinner than artery, wall of vein are made of single layer of cells</li>
+</ul></li>
+<li><p>The <em><q>Pump</q></em>: Heart</p></li>
+<li><p><strong>Double circulatory system</strong></p></li>
+<li><p>Mammals have double circulatory system, it contains both <strong>pulmonary circulation</strong> and <strong>systemic circulation</strong></p>
+
+<ul>
+<li>Pulmonary circulation:
+
+<ul>
+<li>Between heart and lungs</li>
+<li>Pulmonary arteries carries deoxygenated blood from heart to lungs</li>
+<li>Pulmonary vein carries oxygenated blood from lungs to heart</li>
+</ul></li>
+<li>Systemic circulation
+
+<ul>
+<li>Between heart and the whole body</li>
+<li>Systemic arteries carries oxygenated blood to the rest of the body</li>
+<li>Systemic veins carries deoxygenated blood from the rest of the body to heart</li>
+</ul></li>
+</ul></li>
+<li><p>The structure of heart</p></li>
+</ul>
+
+<p><img src="https://kognity-prod.imgix.net/media/edusys_143/content_uploads/aw09_aw06.f6230069d543acd0a5ea.png?w=800&auto=compress"></p>
+
+<ul>
+<li>Other vessels:</li>
+<li>Vena cava lets the deoxygenated blood flow back to heart</li>
+<li>Aorta takes oxygenated from the heart to arteries</li>
+<li>Renal artery is the blood supply from heart to kidney</li>
+<li>Renal vein takes blood from the kidney to vena cava, then returned to heart</li>
+<li>Arteriole is the small arteries that branches off from artery to capillary</li>
+<li>Venule takes deoxygenated blood from the capillaries to back to vein</li>
+<li><strong>Coronary artery disease</strong></li>
+<li>Coronary artery are vessels that supplies the <strong>Cardiac muscle</strong>, its thin and easy to be clotted by fats, coronary disease is caused by this, it could lead to heart attack, high animal fat consumption and high salt consumption could lead to coronary heart disease, also, cigarettes could increase the chance of getting coronary heard disease, since a major ingredient for cigarette is nicotine, it could damage the circulatory system, eventually leading to coronary heart disease</li>
+<li>Transport in blood</li>
+<li>What&#39;s in the blood?
+
+<ul>
+<li>Blood are made of blood cells and plasma, for cells, there is red blood cells and white blood cells, and platelets, red blood cells are responsible for oxygen transport, and white blood cells are part of the immune system, platelets are important because it turns blood into clots when there is bleeding (once come in contact with air), plasma is mostly water, nutrients and hormones, and carbon dioxide are dissolved in it</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="B8">B8 Gas Exchange and respiration</h2>
+
+<ul>
+<li><strong>Gas in lungs</strong>
+
+<ul>
+<li>Gas goes into mouth or nostril into larynx, and trachea, then bronchi, and bronchioles into alveoli, then diffuses into capillaries</li>
+<li>Contraction of diaphragm enlarges lungs and negative pressure in lung pushes air in, then diaphragm is relaxed, lungs are shrunk, pushing air out</li>
+</ul></li>
+<li><p><strong>Protection for the respiratory system</strong></p>
+
+<ul>
+<li>Goblet cells, mucus, and ciliated cells removes pathogens and particles from the respiratory system, Goblet cells produces mucus, ciliated cells pushes particles out of the respiratory system, mucus catches particles that are going into the lungs
+Diseases in respiratory system</li>
+<li>Diseases
+
+<ul>
+<li><strong>Bronchitis</strong>
+
+<ul>
+<li>Smoking could cause multiple respiratory diseases, one is bronchitis, tobacco smoke is hot, the hot smoke going into bronchi could damage the cilia, making it vulnerable to particles, and with insufficient functioning cilia, respiratory system produces more mucus to protect it, resulting in mucus to accumulate in lungs, and affect normal breathing</li>
+</ul></li>
+<li><strong>Emphysema</strong>
+
+<ul>
+<li>Smoke contains carbon particles, carbon particles could sticks in alveoli, white blood cells would try to remove those carbon particles by secreting chemical substances, however, those chemical substances could damage the alveoli itself also, and as more carbon particles accumulate, alveoli gets more damaged, and there will be less surface area for gas exchange to take place, or even make the alveoli not work at all</li>
+<li>Also, smokes contain carbon monoxide, it bonds with the hemoglobin (red blood cells) and make it malfunction, as more hemoglobin gets damaged, insufficient oxygen are delivered around the body</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Aerobic respiration:</strong> glucose + oxygen -&gt; carbon dioxide + water</p></li>
+<li><p><strong>Anaerobic respiration:</strong> glucose -&gt; lactic acid</p></li>
+</ul>
+
+<h2 id="B9">B9 Coordination and homeostasis</h2>
+
+<ul>
+<li><p><strong>Nervous system:</strong> the nervous system is made of two parts, one is the <strong>CNS</strong> (Central Nervous System) another is the <strong>PNS</strong> (Peripheral Nervous System), Central nervous system is basically brain and the spinal cord, and PNS is nerves that spreads around the rest of the body</p></li>
+<li><p><strong>Neurons:</strong> neuron are the cells that composes the nerves as individual cells, just like other specialized cells, it has different parts:</p>
+
+<ul>
+<li>Nucleus</li>
+<li>Axon carries impulse <strong>away</strong> from the cell</li>
+<li>Dendrites accepts impulses and <strong>carry</strong> it toward the cell</li>
+<li>Nerve ending only exists in motor neuron which connects to muscles and make it move</li>
+</ul></li>
+<li><p><strong>Types of neurons</strong></p>
+
+<ul>
+<li>Sensory neuron</li>
+<li>Relay neuron</li>
+<li>Motor neuron</li>
+</ul></li>
+<li><p><strong>Reflexes</strong>: reflex is the natural human response toward a stimuli, brain is not involved in the reflex action</p>
+
+<ul>
+<li>Parts of reflexes:
+
+<ul>
+<li><strong>Receptor:</strong> parts that detects the stimulus</li>
+<li><strong>Sensory neuron</strong> which receives the stimulus</li>
+<li><strong>Relay neuron</strong> which carries the impulse to the spinal cord</li>
+<li><strong>Motor neuron</strong> which finally carries the impulse to the muscle or glands</li>
+<li><strong>Effector</strong> which is the muscle or gland which performs the action as the output of a reflex</li>
+</ul></li>
+</ul></li>
+<li><p><strong>The eye</strong></p>
+
+<ul>
+<li>Pupil: ring of muscles that controls the amount of light entering the eye</li>
+<li>Cones: captures colored light, but does not function with low intensity of light</li>
+<li>Rods: captures the intensity of light, works under environments with low intensity of light</li>
+<li>Retina: layers of light receptors on the inner part of the eyes</li>
+<li>Lens: a jelly like structure to refract entering light onto the retina</li>
+<li>Suspensory ligament: holds the lens in place and stretch it</li>
+<li>Cornea: the white, rigid part of the eye, provides physical protection</li>
+<li>Optical nerve: the nerve that carries electric impulse signals toward the brain</li>
+<li>Blind spot: part of the retina in front of the optical nerve that is lacking receptors</li>
+</ul></li>
+</ul>
+
+<h2 id="B10">B10 Reproduction</h2>
+
+<ul>
+<li><p><strong>Cell division</strong></p>
+
+<ul>
+<li>Mitosis
+
+<ul>
+<li>Used for sexual reproduction</li>
+<li>Mitosis doesn’t have genetic variation</li>
+<li>Mitosis produce <strong>two</strong> daughter cells at a time</li>
+</ul></li>
+<li>Meiosis
+
+<ul>
+<li>Used for Repair, Growth and asexual reproduction</li>
+<li>Meiosis does have genetic variation</li>
+<li>Meiosis produce <strong>four</strong> daughter cells at a time</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Asexual reproduction</strong></p>
+
+<ul>
+<li>Advantages of asexual reproduction
+
+<ul>
+<li>Fast</li>
+<li>Only one parent is required</li>
+</ul></li>
+<li>Disadvantages of asexual reproduction
+
+<ul>
+<li>Less genetical variation (vulnerable to diseases)</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Sexual reproduction</strong></p>
+
+<ul>
+<li>Advantages of sexual reproduction
+
+<ul>
+<li>Greater genetic variation</li>
+</ul></li>
+<li><p>Disadvantages of sexual reproduction</p>
+
+<ul>
+<li>Slow</li>
+<li>Requires two parents</li>
+</ul></li>
+<li><p><strong>Sexual reproduction in plants</strong></p>
+
+<ul>
+<li>Parts of flower
+
+<ul>
+<li>Sepal
+
+<ul>
+<li>Protects flower from drying</li>
+</ul></li>
+<li>Petal
+
+<ul>
+<li>Petals are usually colorful to attract insects and animals</li>
+</ul></li>
+<li>Carpel
+
+<ul>
+<li>The female reproductive organ of plants</li>
+</ul></li>
+<li>Style
+
+<ul>
+<li>Long tube that provide passage to let pollens pass into ovary</li>
+</ul></li>
+<li>Stigma
+
+<ul>
+<li>At the top of Style, entrance of Ovary</li>
+</ul></li>
+<li>Stamen
+
+<ul>
+<li>Male reproductive organ of plants</li>
+</ul></li>
+<li>Filament
+
+<ul>
+<li>Long rod that holds the anther up</li>
+</ul></li>
+<li>Anther
+
+<ul>
+<li>Part where pollen is released</li>
+</ul></li>
+</ul></li>
+<li><strong><em>Hermaphrodite</em></strong>
+
+<ul>
+<li>Plant with both male and female reproductive organ</li>
+</ul></li>
+<li>Insect pollinated plants
+
+<ul>
+<li>Have large petals to attract insects</li>
+<li>Have short stamen and carpel</li>
+<li>Pollens are spiky to stick on insects</li>
+<li>Produce sweet nectars to attract insects to eat the nectar</li>
+<li>Plants have a unique smell to attract insects</li>
+</ul></li>
+<li>Wind pollinate plants
+
+<ul>
+<li>Have small petals to prevent blocking wind</li>
+<li>Have long stamen and carpel to catch wind</li>
+<li>Pollens are smooth to not catch on surfaces</li>
+<li>Does not have nectars</li>
+<li>Does not have such unique smells</li>
+</ul></li>
+<li>Process of plant reproduction
+
+<ul>
+<li>Pollens goes down the pollen tube when it reached the stigma</li>
+<li>Ovule gets fertilized by pollens</li>
+<li>Ovule started to grow into seeds</li>
+<li>If the condition is right:
+
+<ul>
+<li>Enough oxygen</li>
+<li>Enough water</li>
+<li>Optimum temperature</li>
+</ul></li>
+<li>The seeds begins to germinate</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Sexual reproduction in human</strong></p>
+
+<ul>
+<li>Female reproductive organ
+
+<ul>
+<li>Parts
+
+<ul>
+<li>Ovary
+
+<ul>
+<li>Where egg cells are produced</li>
+</ul></li>
+<li>Fallopian tube / Oviducts
+
+<ul>
+<li>Transports egg cells to the uterus, also the site of fertilization</li>
+</ul></li>
+<li>Uterus
+
+<ul>
+<li>The area for embryo to attach to and develop</li>
+</ul></li>
+<li>Cervix
+
+<ul>
+<li>A ring of muscle that separates the vagina and uterus</li>
+</ul></li>
+<li>Vagina
+
+<ul>
+<li>A elastic muscular canal</li>
+</ul></li>
+</ul></li>
+<li>Menstrual cycle
+
+<ul>
+<li>Cycle of production of egg cells</li>
+<li>Cycle of preparation of pregnancy</li>
+<li>Menstrual phase (day 1-5)
+
+<ul>
+<li>Uterus lining is broken down if the egg is not fertilized</li>
+</ul></li>
+<li>Follicular phase (day 6-14)
+
+<ul>
+<li>The lining of uterus begin to repair</li>
+</ul></li>
+<li>Luteal phase (day 14-28)
+
+<ul>
+<li>The lining of the uterus grows thicker</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Male reproductive organ
+
+<ul>
+<li>Sperm duct
+
+<ul>
+<li>Transfers semen from the testes to the penis</li>
+</ul></li>
+<li>Urethra
+
+<ul>
+<li>Passage for urine</li>
+</ul></li>
+<li>Prostate gland
+
+<ul>
+<li>Secretes fluid to protect sperm, know as semen</li>
+</ul></li>
+<li>Scrotum
+
+<ul>
+<li>A sack of skin that have large surface area, used to lower the temperature</li>
+</ul></li>
+</ul></li>
+<li>Fertilization 
+
+<ul>
+<li>Characteristic of sperm
+
+<ul>
+<li>Movable (1-3mm per hour)</li>
+<li>Much smaller than egg</li>
+</ul></li>
+<li>Characteristic of egg
+
+<ul>
+<li>Immovable (well, it cant on its own)</li>
+<li>Much larger than sperm</li>
+</ul></li>
+<li>Sperm - 23 chromosomes</li>
+<li>Egg - 23 chromosomes</li>
+<li>Embryo - fertilized egg - 46 chromosomes</li>
+<li>Fertilization occurs in fallopian tube/oviduct</li>
+<li>Embryo is transported into uterus and attached to the placenta on the uterus lining</li>
+</ul></li>
+<li>Pregnancy
+
+<ul>
+<li>Placenta
+
+<ul>
+<li>Transportation of nutrients between the fetus and mother</li>
+<li>Fetus and mother&#39;s blood does not mix, therefore placenta act as a filter</li>
+</ul></li>
+<li>Amniotic sac
+
+<ul>
+<li>Amniotic sac contains amniotic fluid to provide physical protection for the fetus</li>
+</ul></li>
+<li>Umbilical cord
+
+<ul>
+<li>Connects fetus and mother</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="B11">B11 Inheritance</h2>
+
+<ul>
+<li><p><strong>Chromosomes</strong></p>
+
+<ul>
+<li>Chromosomes are threads of DNA which carries genetic information</li>
+<li>In body cells, there is normally 23 pairs of chromosomes</li>
+<li>The 22nd chromosome is X, 23rd chromosomes is X or Y, those are sex chromosomes
+
+<ul>
+<li>Male have XY</li>
+<li>Female have XX</li>
+<li>Egg cells only contain X chromosome</li>
+<li>Sperm could contain either X or Y chromosome</li>
+</ul></li>
+<li><p>Genotypes</p>
+
+<ul>
+<li><p>When two sex cells combine, the chromosome are taken within a pair in two cells and combined like this:  </p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>X</th>
+<th>x</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>X</strong></td>
+<td>XX</td>
+<td>Xx</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td>Xx</td>
+<td>xx</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Dominant genotype: Capitalized letters, if one dominant genotype exists, the gene would result just as that genotype</p></li>
+<li><p>Recessive genotype: small letters, only result as a valid genotype if two of the chromosome are both recessive</p></li>
+<li><p>Homozygous: contain either both dominant or both recessive</p></li>
+<li><p>Heterozygous: contain both dominant and recessive</p></li>
+</ul></li>
+<li><p>Phenotypes</p>
+
+<ul>
+<li>The physical representation of genes
+
+<ul>
+<li>Hair color</li>
+<li>Skin color</li>
+<li>…</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Mutation</strong></p>
+
+<ul>
+<li>Sudden change in genes caused by external factors</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="B12">B12 Organisms and their environments</h2>
+
+<ul>
+<li><strong>Energy flow</strong>
+
+<ul>
+<li>Source of all energy in the food chain - sun light</li>
+<li>Plants utilizes energy delivered by sunlight to produce food and survive</li>
+<li>When animal eats plants, the energy is absorbed and the energy flows up the food chain</li>
+<li>The food chain usually contain two to five organisms
+
+<ul>
+<li>Producers</li>
+<li>Primary consumers (herbivore: plant eaters)</li>
+<li>Secondary consumers (carnivore: animal/meat eaters)</li>
+<li>Tertiary consumers</li>
+<li>Quaternary consumers</li>
+<li>Decomposers (feeds on dead bodies of all above, which is also a consumer, but could be consumed by plants)</li>
+</ul></li>
+<li>All those groups mentioned above are called trophic levels</li>
+<li>Trophic level increases as it flows up the food chain</li>
+<li>A food chain must include a producer</li>
+<li>The transformation of energy is not total, as the energy flows up the food chain, it only keep <strong>90%</strong> of the total amount of energy going up each level</li>
+</ul></li>
+</ul>
+
+<h2 id="B13">B13 Human influences on the ecosystem</h2>
+
+<ul>
+<li><p><strong>The carbon cycle</strong></p>
+
+<ul>
+<li>Photosynthesis
+
+<ul>
+<li>Plants take carbon from the atmosphere and produce glucose (the ONLY way that carbons could leave the atmosphere)</li>
+</ul></li>
+<li>Respiration
+
+<ul>
+<li>Plants and animals perform respiration, as their cell activity releases carbon dioxide and released into atmosphere</li>
+</ul></li>
+<li>Feeding
+
+<ul>
+<li>Feeding of plants and animals also transfers carbon</li>
+</ul></li>
+<li>Decomposition
+
+<ul>
+<li>Dead bodies of plants and animals gets decomposed and the carbon dioxides are released back into atmosphere</li>
+</ul></li>
+<li>Fossilization
+
+<ul>
+<li>If the dead body gets buried, high temperatures and pressure turns it into fossil fuels, which could be used to combust</li>
+</ul></li>
+<li><p>Combustion</p>
+
+<ul>
+<li>Combustion of fossil fuels releases carbon monoxide and carbon dioxide back into atmosphere</li>
+</ul></li>
+<li><p>Human impact on the carbon cycle</p>
+
+<ul>
+<li>The carbon cycle affected if any stage of carbon cycle is altered, human impact on carbon cycle by photosynthesis could be killing plants by a large quantity(cutting trees), or increased combustions of fossil fuels, those all contributes to the increased carbon level in the atmosphere</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Deforestation</strong></p>
+
+<ul>
+<li>Deforestation, massive amount of loss of trees caused by artificial factors, could harm the environment in multiple ways:
+
+<ul>
+<li>Species extinction
+
+<ul>
+<li>As the local ecosystem could be heavily relied on trees, absence of trees around the area could affect the population of other species around the area as most of them relies on trees and could not adapt to such large change in the environment</li>
+</ul></li>
+<li>Soil erosion
+
+<ul>
+<li>Trees have large and long extending roots, which supports them and hold them in place, it also provides support for soils, if trees died out in an area, soil would lose its support, therefore eroding, turning into dust storms or being carried by waters</li>
+</ul></li>
+<li>Flooding
+
+<ul>
+<li>If the soil is deformed, the water cycle is likely to be affected, as there would be less restrictions of water flows, which could eventually results in flooding</li>
+</ul></li>
+<li>Increased CO2 (mentioned above)
+Water pollution</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Chemical wastes</strong></p>
+
+<ul>
+<li>The pollution of water by chemical could cause fatal effects on the entire local ecosystem, since the whole ecosystem relies on water for drinking, and consumption of aquatic animals which were active around the polluted area could spread the chemical pollution in the water around and up the food chain</li>
+</ul></li>
+<li><p><strong>Discarded rubbish</strong></p>
+
+<ul>
+<li>Discarded rubbish could harm marine life as they could mistake rubbishes as foods</li>
+</ul></li>
+<li><p><strong>Untreated sewage</strong></p>
+
+<ul>
+<li>Untreated sewages contains harmful bacteria, as they are released into ocean or rivers, the large scale of bacterial activity around the area could decrease the oxygen level in the water, leaving other organisms with limited supplies</li>
+</ul></li>
+<li><p><strong>Fertilizers</strong></p>
+
+<ul>
+<li>Fertilizers releasing into water could massively increase the amount of microorganisms as they consume the nutrients in the fertilizers, those large groups of organisms floating on the surface of water could block the sunlight passing under the water, many organisms that relies on sunlight would die off, and as the nutrients depletes, the large group of micro organisms dies off also, leaving decomposers a massive amount of consumables, increase of activity of decomposition leads to oxygen to run off and more organisms dying</li>
+<li>The massive increase of nutrition supply is called <strong><em>eutrophication</em></strong></li>
+</ul></li>
+</ul>
+
+<h2 id="C2">C2 Experimental techniques</h2>
+
+<ul>
+<li><strong>Solvent</strong>
+
+<ul>
+<li>Things to dissolve in (e.g. water)</li>
+</ul></li>
+<li><p><strong>Solute</strong></p>
+
+<ul>
+<li>Things that’s dissolved (e.g. salt)</li>
+</ul></li>
+<li><p><strong>Methods of purification</strong></p>
+
+<ul>
+<li>Filtration
+
+<ul>
+<li>Very simple technique to separate an INSOLUBLE solid from a liquid, filter paper is used for separation of fine particles</li>
+</ul></li>
+<li>Crystallization
+
+<ul>
+<li>Crystallization is a separation technique which requires boiling of liquid solvent to extract solutes from the solvent which are yet to evaporate because of the difference in boiling points, it is cooled down and crystallizes into solids</li>
+</ul></li>
+<li>Distillation
+
+<ul>
+<li>Distillation is used to separate multiple substances which have different boiling points, as the temperature increases, substances with lower boiling point gets boiled first, it is then cooled down and condensed into liquid to be collected, repeats those steps with gradual increment of temperature would achieve separation of substances with different boiling points</li>
+</ul></li>
+<li>Paper chromatography
+
+<ul>
+<li>Paper chromatography could be used as a separation technique, papers could separate different chemicals which could then be washed off the paper</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="C4">C4 Stoichiometry</h2>
+
+<p><strong>For Stoichiometry there is only these things to memorize:</strong> </p>
+
+<ol>
+<li><p><strong><em>The Avogadro constant</em></strong>  </p>
+
+<blockquote>
+<p><strong><em>6.02 × 10<sup>23</sup></em></strong></p>
+</blockquote>
+
+<ul>
+<li>The amount of particle/atoms in 12g of carbon-12
+<strong>1 mole of substance = (The Avogadro constant) 6.02 × 10<sup>23</sup> molecules of substance</strong></li>
+<li>(Relative atomic/molecular mass/mass number) in grams = mass of one mole of substance</li>
+</ul></li>
+<li><p><strong><em>Relative molecular mass</em></strong></p>
+
+<ul>
+<li>The sum of the mass number of all atoms within a molecule</li>
+</ul></li>
+<li><p><strong><em>Molar gas volume</em></strong></p>
+
+<ul>
+<li>Under same temperature and pressure, the same volume of gas could contain a equal number of molecules, no matter what the gas is</li>
+<li>Number of moles = gas volume / 24</li>
+</ul></li>
+<li><p><strong>Formula</strong> (Simple AF)</p>
+
+<ul>
+<li><p>Number of moles = <sub>a</sub>M</p></li>
+<li><p>Relative atomic / molecular mass = <sub>r</sub>M</p></li>
+<li><p>Total Substance Mass = M<br>
+\[<br>
+\begin{align*}<br>
+_{a}M = \frac{M} {_{r}M}<br>
+\end{align*}<br>
+\]</p></li>
+</ul></li>
+</ol>
+
+<h2 id="C5">C5 Electricity and chemistry</h2>
+
+<ul>
+<li><p><strong>Electrolysis</strong></p>
+
+<ul>
+<li>Electrolysis is for breaking down of an ionic compound, by the passage of electricity and the attraction of charged matters</li>
+<li>Components of electrolysis
+
+<ul>
+<li>A battery / power source</li>
+<li>Two electrodes (one positive one negative)</li>
+<li>Positive electrode: Anode</li>
+<li>Negative electrode: Cathode</li>
+<li><strong><em>PANIC</em></strong> (Positive Anode n&#39; Negative Cathode)</li>
+<li>An electrolyte (molten or aqueous ionic compound to be broken down)</li>
+</ul></li>
+<li>Reduction: gaining of election/decrease in charge</li>
+<li>Oxidation: losing of electron/increase in charge</li>
+<li>Positive ions are attracted to the negative cathode</li>
+<li><p>Negative ions are attracted to the positive anode</p></li>
+<li><p>Reactivity series (increasing)</p>
+
+<ol>
+<li>Gold</li>
+<li>Silver</li>
+<li><strong>Copper</strong></li>
+<li>Hydrogen</li>
+<li>Iron</li>
+<li>Zinc</li>
+<li><strong>Carbon</strong></li>
+<li>Aluminum</li>
+<li>Magnesium</li>
+<li>Calcium</li>
+<li>Lithium</li>
+</ol></li>
+</ul></li>
+</ul>
+
+<h2 id="C6">C6 Energy changes in chemical reactions</h2>
+
+<ul>
+<li><strong>Exothermic reaction:</strong> releases energy <em>(temperature increase)</em></li>
+<li><strong>Endothermic reaction:</strong> absorbs energy <em>(temperature decrease)</em></li>
+<li><strong>Bond energy</strong>
+
+<ul>
+<li>Energy is released when new bonds is formed</li>
+<li>Energy is absorbed when bonds are broken</li>
+</ul></li>
+<li><strong>Activation energy:</strong> energy needed to initiate certain reaction</li>
+</ul>
+
+<h2 id="C7">C7 Chemical reaction</h2>
+
+<p><strong>Rate of reaction</strong>  </p>
+
+<blockquote>
+<p>How does reaction occur?<br>
+Collision of molecules.<br>
+The harder the better.</p>
+</blockquote>
+
+<p>Therefore,  </p>
+
+<ul>
+<li>Factors that affect rate of reaction
+
+<ul>
+<li>+Concentration = Rate+ (More particles)</li>
+<li>-Particle size = +Surface area = Rate+ (More particle could come in contact with other particles)</li>
+<li>+Temperature = Rate+ (Faster movement of molecules = Harder collision of molecules)</li>
+<li>Usage of catalyst = Rate+ (At optimum temperature for the specific catalyst)
+Redox reactions</li>
+</ul></li>
+<li>Oxidation = gain of oxygen = loss of election</li>
+<li>Reduction = loss of oxygen = gain of electron</li>
+<li><strong><em>OILRIG</em></strong> (Oxidation is loss of electron, Reduction is gain of electron)</li>
+<li>Reducing and Oxidizing agents
+
+<ul>
+<li>Reducing agents are simply molecule that’s been though reduction during the reaction</li>
+<li>Same applies for Oxidizing agent</li>
+</ul></li>
+</ul>
+
+<h2 id="C8">C8 Acid Bases and Salts</h2>
+
+<p><strong>Acid and Bases are chemical opposite</strong></p>
+
+<ul>
+<li><p><strong>Definition of acid and bases</strong></p>
+
+<ul>
+<li><strong><em>Acids are proton (hydrogen ion) donor, and bases are proton(hydrogen ion) acceptor</em></strong>
+
+<ul>
+<li>Acid give out hydrogen ions in reactions</li>
+<li>Base takes hydrogen ions in reactions</li>
+</ul></li>
+</ul></li>
+<li><p><strong>pH level</strong></p>
+
+<ul>
+<li><p>pH level: A property of substances that is represented by integers 0-14</p></li>
+<li><p>Lower the pH level, more acidic a substance is</p></li>
+<li><p>Higher the pH level, more basic it is</p></li>
+<li><p>Alkaline</p></li>
+<li><p>If a base dissolves in water, then its alkaline</p>
+
+<ul>
+<li>Alkaline is a category of base substances</li>
+<li>Therefore, a alkaline is always base, a base could be alkaline
+Indicators</li>
+</ul></li>
+<li><p>pH levels could be tested with different indicators</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>indication of acid</th>
+<th>Indication of base</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Litmus</strong></td>
+<td>red</td>
+<td>blue</td>
+</tr>
+<tr>
+<td><strong>Methyl Orange</strong></td>
+<td>red</td>
+<td>yellow</td>
+</tr>
+<tr>
+<td><strong>Universal Indicator Paper</strong></td>
+<td><strong><em>strong:</em></strong> red, <strong><em>weak:</em></strong> yellow</td>
+<td><strong><em>strong:</em></strong> purple, <strong><em>weak:</em></strong> blue</td>
+</tr>
+<tr>
+<td><strong>Phenolphthalein</strong></td>
+<td>colorless</td>
+<td>pink</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+<li><p><strong>Reaction of acid and bases</strong></p>
+
+<ul>
+<li>Salt: ionic compounds made of positive ion and negative ions (???)</li>
+<li>Acid + metal &rarr; salt + hydrogen</li>
+<li>Acid + metal oxide(base) -&gt; salt + water (neutralization: two chemical opposite, acid and base reacts together to form products with neutral pH level)</li>
+<li>Acid + metal hydroxide(base) &rarr; salt + water (neutralization)</li>
+<li>Acid + ammonia solution(base) &rarr; salt + water (neutralization)</li>
+<li>Acid + Metal carbonate &rarr; salt + carbon dioxide + water</li>
+</ul></li>
+<li><p><strong>Types of oxides</strong></p>
+
+<ul>
+<li>Basic oxides / metallic oxides, oxides with metal, and are basic, duh (CaO, MgO)</li>
+<li>Acidic oxides, oxides with non-metal, and are acidic (SO2)</li>
+<li>Neutral oxides (Carbon monoxides, dinitrogen oxide, nitrous oxide, nitrogen monoxide)</li>
+<li>Amphoteric oxide, oxides that could act as both acid and base</li>
+</ul></li>
+<li><p><strong>Preparation of salts</strong></p>
+
+<ul>
+<li>General Procedure / method
+
+<ol>
+<li>Warm the acid to speed the reaction</li>
+<li>Add metal, metal oxide or metal carbonate in while stirring the acid</li>
+<li>Filter the mixture to remove extra solid materials</li>
+<li>Pour the leftovers into evaporating dishes and heat, stop once the crystal started to form</li>
+<li>Cool it down</li>
+<li>Filter to retrieve the crystals from the liquid</li>
+<li>And there is your salts.</li>
+</ol></li>
+</ul></li>
+<li><p><strong>Identifications of ions and gases</strong></p>
+
+<ul>
+<li>Testing for aqueous cations</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Cation</th>
+<th>Effect of a.q. Sodium Hydroxide</th>
+<th>Effect of a.q. Ammonia</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Ammonium, NH<sub>4</sub><sup>+</sup></td>
+<td>Ammonia gas is produced when heated; turns from red to litmus to blue</td>
+<td>-----</td>
+</tr>
+<tr>
+<td>Calcium, Ca<sup>2+</sup></td>
+<td>While precipitation is formed, insoluble</td>
+<td>No precipitation</td>
+</tr>
+<tr>
+<td>Copper(II), Cu<sup>2+</sup></td>
+<td>Light blue precipitation, insoluble</td>
+<td>Light blue precipitation, soluble</td>
+</tr>
+<tr>
+<td>Iron(II), Fe<sup>2+</sup></td>
+<td>Green precipitation, insoluble</td>
+<td>Green precipitation, insoluble</td>
+</tr>
+<tr>
+<td>Iron(III), Fe<sup>3+</sup></td>
+<td>Red-brown precipitation, insoluble</td>
+<td>Red-brown precipitation, insoluble</td>
+</tr>
+<tr>
+<td>Zinc(II), Zn<sup>2+</sup></td>
+<td>White precipitation, soluble, dissolving yields a colorless solution</td>
+<td>White precipitation, soluble, dissolving yields a colorless solution</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Flame tests for cations</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Metal Ions</th>
+<th>Color When burnt</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Lithium, Li<sup>+</sup></td>
+<td>Red</td>
+</tr>
+<tr>
+<td>Sodium, Na<sup>+</sup></td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>Potassium, K<sup>+</sup></td>
+<td>Lilac, Light Purple</td>
+</tr>
+<tr>
+<td>Copper(II), Cu<sup>2+</sup></td>
+<td>Blue-Green</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+
+<h2 id="C14">C14 Organic Chemistry</h2>
+
+<ul>
+<li><p><strong>Names of compounds</strong></p>
+
+<ul>
+<li><p><strong>Alkane</strong></p>
+
+<ul>
+<li>Alkane features a single bond between carbons</li>
+<li>Its functional group is Carbon</li>
+<li>Each side of carbon is bonded with hydrogen</li>
+<li>Therefore alkane is saturated, meaning that the compound is hard to be broken down</li>
+</ul></li>
+<li><p><strong>Alkene</strong></p>
+
+<ul>
+<li>Alkene features a double bond between carbons</li>
+<li>Since it needs to have a double bond between carbons, there is no <q>methene</q> (one carbon alkene)</li>
+<li>Functional group is still Carbon</li>
+<li>Alkene is not saturated because of the double bond</li>
+</ul></li>
+<li><p><strong>Alcohol</strong></p>
+
+<ul>
+<li>Alcohol features single bonds between carbons, but have one OH as a functional group</li>
+</ul></li>
+<li><p>Prefixes (you only need to memorize the first four actually)</p>
+
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Number of carbons</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Meth-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Eth-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Prop-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>But-</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Penta-</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Hex-</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Hept-</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Octa-</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Dec-</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Dodec-</td>
+<td>10</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+<li><p><strong>Fuel</strong></p>
+
+<ul>
+<li>Types of fuels
+
+<ul>
+<li>Coal</li>
+<li>Natural gas
+
+<ul>
+<li>Natural gas is mainly methane</li>
+<li>Equation for the combustion of Natural Gas:
+
+<ul>
+<li>Methane + Oxygen &rarr; Carbon Dioxide + Water</li>
+</ul></li>
+</ul></li>
+<li>Petroleum
+
+<ul>
+<li>Fractional Distillation
+&gt; Petroleum, crude oil, consists of different compounds, organic compound-Hydrocarbon, 30% of alkanes, with the remainder of other compounds, this mixture of all those compounds altogether could not be effectively utilized, therefore a separation technique that will separate the crude oil into pure substances, called Fractional Distillation is invented
+
+<ul>
+<li>The process of Fractional Distillation: 
+
+<ul>
+<li>Crude oil is boiled then released into the distillation tower</li>
+<li>The temperature have a decreasing trend going up the tower</li>
+<li>Each temperature point have a layer of condensing surfaces,</li>
+<li>Where the temperature of the material drops below its boiling point and the material is condensed into liquids</li>
+<li>The leftover material which have a slightly lower boiling point continue to flow upwards to the colder area to be condensed</li>
+<li>This separates the substances by their boiling points</li>
+</ul></li>
+<li>Products
+
+<ul>
+<li>350C - 600C Bitumen (used for roads and roofing)</li>
+<li>250C - 350C Diesel fuels (for trucks that have diesel engine)</li>
+<li>60C - 100C Random chemicals (Naphtha for example, are used as base for many chemicals</li>
+<li>40C - 100C Petrol (gasoline)</li>
+<li>&lt;40C Gas </li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Homologous series</strong></p>
+
+<ul>
+<li>Homologous series is a series of compound that have similar chemical properties but each differs from each other from addition of more functional groups.</li>
+<li>General formula of a typical homologous series: <strong>Alkanes:</strong>  C~n~H~2n+2~</li>
+</ul></li>
+<li><p><strong>Alkanes</strong></p>
+
+<ul>
+<li>Alkane is a common hydrocarbon, the chain length differs its usage, its mainly used for fuels</li>
+<li>Trend of properties in the series
+
+<ul>
+<li>Going up the series (Meth-Eth-Pro)
+
+<ul>
+<li>Chain length+, Numbers on carbon+</li>
+<li>Boiling point+, since the molecular mass is higher going up the series</li>
+<li>Physical state: From gas to liquid cuz duh</li>
+</ul></li>
+</ul></li>
+<li><p>Alkanes is strong since its mainly composed of C-H covalent bonds, but it still undergoes combustion</p>
+
+<blockquote>
+<p>Methane + 2O<sub>2</sub> &rarr; CO<sub>2</sub> + 2H<sub>2</sub>O (exothermic)</p>
+</blockquote></li>
+<li><p>Again, bonds are strong in alkanes compounds, meaning this type on compound is saturated, Each molecules are bond by single bonds</p></li>
+</ul></li>
+<li><p><strong>Cracking</strong></p>
+
+<ul>
+<li>Heating Ethane would break Ethane down to Ethene and Hydrogen</li>
+<li>However, since the C-H covalent bond is a strong bond, it would require massive amount of thermal energy to break it down</li>
+<li>Heating to high temperatures are often expensive, therefore an alternative approach is Catalytic cracking, instead of heating Ethane to 800C, adding aluminum as a catalyst could allow cracking at only 500C</li>
+<li>Heating cracking and Catalytic cracking are used for different scenarios, Heating cracking are often used in long chains of alkanes</li>
+</ul></li>
+<li><p>Saturation</p>
+
+<ul>
+<li>Alkenes are unsaturated because of the double bond, its likely to react with halogens, we could utilize this property to test for test for the existence of alkene, when alkene is reacted with Bromide(common halogen), it turns from a brown solution to colorless solution</li>
+</ul></li>
+<li><p><strong>Alcohol</strong></p>
+
+<ul>
+<li><p>Fermentation</p>
+
+<ul>
+<li><p>Fermentation is the process of making alcohol by breaking down glucose with yeast</p>
+
+<blockquote>
+<p>Glucose &rarr; ethanol + carbon dioxide</p>
+</blockquote></li>
+</ul></li>
+<li><p>Hydration of ethene</p>
+
+<ul>
+<li>C<sub>2</sub>H<sub>4</sub> +  H<sub>2</sub>O &rarr; C<sub>2</sub>H<sub>5</sub>OH</li>
+<li>Ethene + water &rarr; Ethanol</li>
+</ul></li>
+<li><p>Properties of ethanol</p>
+
+<ul>
+<li>Ethanol is small and light molecules that’s liquid at room temp. easy to evaporate and highly flammable and ignited at temperature lower than room temp. combusts with oxygen</li>
+</ul></li>
+<li><p>Use of ethanol</p>
+
+<ul>
+<li>Ethanol is only toxic at large scale consumption, and its highly volatility, therefore its used as solvents for cosmetics and perfumes</li>
+<li>Ethanol could also be used as fuels, leftover crops could be processed to produce ethanol</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Polymers</strong></p>
+
+<ul>
+<li>Single unit of substance = monomer</li>
+<li>Multiple units joined together = polymer</li>
+<li>Common polymers
+
+<ul>
+<li>PVC
+
+<ul>
+<li>Series of polyvinyl chloride</li>
+</ul></li>
+<li>Starch
+
+<ul>
+<li>Series of glucose</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Synthetic polymers</strong></p>
+
+<ul>
+<li>Manufacture of polythene
+
+<ul>
+<li>Alkenes are important in the manufactures of polythene because its unsaturated and easy to bond with other molecules</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="P4">P4 Properties of waves (light and sound)</h2>
+
+<ul>
+<li><p><strong>What r waves?</strong></p>
+
+<ul>
+<li>Center: source of disturbance </li>
+<li>Peak of waves: crest</li>
+<li>Low point of waves: trough</li>
+<li>Types of wave
+
+<ul>
+<li>Transverse - up and down</li>
+<li>Longitudinal - back and forth</li>
+</ul></li>
+<li><p>Wavelength</p>
+
+<ul>
+<li>the distance between two crests or two trough or any two equally spaced points on two cycles of wave</li>
+</ul></li>
+<li><p>Frequency</p>
+
+<ul>
+<li>number of complete wave pass one point each second = numbers of waves / time</li>
+</ul></li>
+<li><p>Wave speed</p>
+
+<ul>
+<li>wavelength * frequency</li>
+</ul></li>
+<li><p>Reflection of wave</p>
+
+<ul>
+<li>angle of incidence = angle of reflection</li>
+</ul></li>
+<li><p>Refractive index</p>
+
+<ul>
+<li>When a wave enters a denser medium it slows down, and the wave is diverted towards the normal</li>
+<li>When a wave enters a less dense medium it speeds up, and the wave is diverted away from the normal</li>
+<li>Refractive index is the ratio of speed of light in vacuum and speed of light in a medium
+
+<ul>
+<li>Therefore, Refractive index = speed of light in vacuum / speed of light in a medium</li>
+<li>Also, Refractive index = sin(angle of incidence) / sin(angle of refraction)</li>
+</ul></li>
+<li><p>Total internal reflection</p>
+
+<ul>
+<li><p>Critical angle</p>
+
+<ul>
+<li>If the angle of incidence is larger than the critical angle, then the light penetrates the surface it hits on, otherwise its completely reflected</li>
+</ul></li>
+<li><p>Formulas</p>
+
+<ul>
+<li><p>R = Refractive Index</p></li>
+<li><p>C = Critical Angle</p></li>
+</ul>
+
+<p>\[<br>
+\begin{align*}<br>
+R = \frac{1} {\sin(C)} \\<br>
+\end{align*}<br>
+\]</p>
+
+<p>\[<br>
+\begin{align*}<br>
+C = \arcsin(\frac{1} {R})<br>
+\end{align*}<br>
+\]</p></li>
+</ul></li>
+<li><p>Ray graphing</p>
+
+<ul>
+<li>Optical axis
+
+<ul>
+<li>The line on the graph that represents the path of a ray</li>
+</ul></li>
+<li>Principal focus
+
+<ul>
+<li>The point of intersection of rays refracted by converging lens</li>
+</ul></li>
+<li>Focal length
+
+<ul>
+<li>The distance of the center of the lens to the principal focus point</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p><strong>EM Waves</strong></p>
+
+<ul>
+<li>Order of spectrum (Long Wave len. &rarr; Short Wave len.)
+
+<ul>
+<li>Radiowave
+
+<ul>
+<li>Can be send over great distance</li>
+<li>Refracted back on the top of the atmosphere so it actually travels thru the curvature of the earth</li>
+</ul></li>
+<li>Microwave
+
+<ul>
+<li>Are absorbed by materials within foods and organisms, creating a heating effect</li>
+</ul></li>
+<li>Infra-red
+
+<ul>
+<li>Are released more by things with higher temperature, so its used to detect heat</li>
+</ul></li>
+<li>Visible light
+
+<ul>
+<li>Red</li>
+<li>Orange</li>
+<li>Yellow</li>
+<li>Green</li>
+<li>Cyan</li>
+<li>Blue</li>
+<li>Violet</li>
+</ul></li>
+<li>Ultra-violet</li>
+<li>X-rays</li>
+<li>Gamma rays<br></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Sound wave</strong></p>
+
+<ul>
+<li>Faster vibration = increased frequency = increased pitch</li>
+<li>Larger vibration = increased amplitude = increased loudness</li>
+</ul></li>
+</ul>
+
+<hr>
+
+<h6 id="toc_11">IGCSE is a trademark of Cambridge Education, This site is not part of Cambridge Education, nor is this site associated with Cambridge Education.</h6>
+
+<h6 id="toc_12">This site is for educational purposes only.</h6>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var e={html:"HTML",xml:"XML",svg:"SVG",mathml:"MathML",css:"CSS",clike:"C-like",javascript:"JavaScript",abap:"ABAP",actionscript:"ActionScript",apacheconf:"Apache Configuration",apl:"APL",applescript:"AppleScript",asciidoc:"AsciiDoc",aspnet:"ASP.NET (C#)",autoit:"AutoIt",autohotkey:"AutoHotkey",basic:"BASIC",csharp:"C#",cpp:"C++",coffeescript:"CoffeeScript","css-extras":"CSS Extras",fsharp:"F#",glsl:"GLSL",http:"HTTP",inform7:"Inform 7",json:"JSON",latex:"LaTeX",lolcode:"LOLCODE",matlab:"MATLAB",mel:"MEL",nasm:"NASM",nginx:"nginx",nsis:"NSIS",objectivec:"Objective-C",ocaml:"OCaml",parigp:"PARI/GP",php:"PHP","php-extras":"PHP Extras",powershell:"PowerShell",jsx:"React JSX",rest:"reST (reStructuredText)",sas:"SAS",sass:"Sass (Sass)",scss:"Sass (Scss)",sql:"SQL",typescript:"TypeScript",vhdl:"VHDL",vim:"vim",wiki:"Wiki markup",yaml:"YAML"};Prism.hooks.add("before-highlight",function(s){var a=s.element.parentNode;if(a&&/pre/i.test(a.nodeName)){var t,i,r=a.getAttribute("data-language")||e[s.language]||s.language.substring(0,1).toUpperCase()+s.language.substring(1),l=a.previousSibling;l&&/\s*\bprism-show-language\b\s*/.test(l.className)&&l.firstChild&&/\s*\bprism-show-language-label\b\s*/.test(l.firstChild.className)?i=l.firstChild:(t=document.createElement("div"),i=document.createElement("div"),i.className="prism-show-language-label",t.className="prism-show-language",t.appendChild(i),a.parentNode.insertBefore(t,a)),i.innerHTML=r}})}}();
+</script>
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
 </body>
+
 </html>
