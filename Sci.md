@@ -1,20 +1,23 @@
 #IGCSE Coordinated Science Decompiled
+
 ***
 
 #####The purpose of this site is to condense every bits of knowledge covered by ICGSE Science into its simplest form for exam preps.
 
-######Pasted and refactored from my revision notes : )
-######Could be missing something but im pretty sure 95% of stuff is included
-######Since all the information here is simplifed, it would only be ideal to use as revision material to memorize keypoints and all that, if you didnt learn very much in the past two years, go to [Kognity](https://kognity.com) and start over.
+######Could be missing something but I'm pretty sure 95% of stuff is included
+
+######Since all the information here is simplified, it would only be ideal to use as revision material to memorize key points and all that, if you didn't learn very much in the past two years, go to [Kognity](https://kognity.com) and start over lmao.
 
 	Estimated reading time: 20 minutes
-	Much faster than flipping thu textbooks eh?
-	
+	Pls shut up grammar police
+
 
 #Topic Checklist:   
 ***
 ######Scroll down, or use links below to redirect yourself
+
 ######Use Ctrl/Command + F to search for keywords
+
 ##1. Biology
 
 > - <a href="#B1">B1 Characteristics of living organisms</a>
@@ -33,37 +36,38 @@
 
 ##2. Chemistry
 
-> - C1 The particulate nature of matter
-> - C2 Experimental techniques
-> - C3 Atoms, elements and compounds
-> - C4 Stoichiometry
-> - C5 Electricity and chemistry
-> - C6 Energy changes in chemical reactions
-> - C7 Chemical reactions
-> - C8 Acids, bases and salts
-> - C9 The periodic table
-> - C10 Metals
-> - C11 Air and water
-> - C12 Sulfur
-> - C13 Carbonates
-> - C14 Organic chemistry
+> - <a href="#C1">C1 The particulate nature of matter</a>
+> - <a href="#C2">C2 Experimental techniques</a>
+> - <a href="#C3">C3 Atoms, elements and compounds</a>
+> - <a href="#C4">C4 Stoichiometry</a>
+> - <a href="#C5">C5 Electricity and chemistry</a>
+> - <a href="#C6">C6 Energy changes in chemical reactions</a>
+> - <a href="#C7">C7 Chemical reactions</a>
+> - <a href="#C8">C8 Acids, bases and salts</a>
+> - <a href="#C9">C9 The periodic table</a>
+> - <a href="#C10">C10 Metals</a>
+> - <a href="#C11">C11 Air and water</a>
+> - <a href="#C12">C12 Sulfur</a>
+> - <a href="#C13">C13 Carbonates</a>
+> - <a href="#C14">C14 Organic chemistry</a>
 
 ##3. Physics
-> - P1 motion
-> - P2 Work, energy and power
-> - P3 Thermal Physics
-> - P4 Properties of waves, including light and sound
-> - P5 Electricity and magnetism 
-> - P6 Electric circuits
-> - P7 Electromagnetic effects
-> - P8 Atomic physics
+
+> -  <a href="#P1">P1 motion</a>
+> -  <a href="#P2">P2 Work, energy and power</a>
+> -  <a href="#P3">P3 Thermal Physics</a>
+> -  <a href="#P4">P4 Properties of waves, including light and sound</a>
+> -  <a href="#P5">P5 Electricity and magnetism</a>
+> -  <a href="#P6">P6 Electric circuits</a>
+> - <a href="#P7"> P7 Electromagnetic effects</a>
+> -  <a href="#P8">P8 Atomic physics</a>
 
 <div style="height: 10px;"> </div>
 
 ***
 
 <div style="height: 100px;"> </div>
-	
+
 <h2 id="B1">B1 Characteristics of living organisms</h2>
 
 - **The seven characteristics of living organism**
@@ -78,7 +82,7 @@
 - **Extended Stuff:**
 	- **Metabolism:** Refers to all the chemical reactions within the organism.
 	- **Autotroph:** Organisms that make their own food (Producers).
-	- **Heterotroph** Organisms that relies on other organisms for food (Consumers).
+	- **Heterotroph**: Organisms that relies on other organisms for food (Consumers).
 	
 	
 <h2 id="B2">B2 Cells</h2>
@@ -117,7 +121,7 @@ Biomolecules is simply **organic molecules** found in living organisms
 
 **What is organic compound?**
 >Organic compounds is compounds containing carbon, but **not** carbonate or carbon oxides.
-	
+
 Biomolecules are usually polymers: large molecules in chain
 Monomer: single units that composes the larger polymer
 
@@ -134,6 +138,7 @@ Monomer: single units that composes the larger polymer
 	2. Hydrolysis
 			Covalent bond of hydrated polymer is broken into two monomers, each bonding with a OH
 			
+
 **Typical biomolecules:** Carbohydrates, Fats, Protein
 All composed of C,H,O,N,P
 	
@@ -149,7 +154,7 @@ All composed of C,H,O,N,P
 	2. Fats and oil contains twice as much energy as carbohydrates does
 		Fats and oil are triglycerides
 		Fats comes from animal, while oil comes from plants
-		
+	
 - **Typical biomolecules - Proteins**
 
 	1. Proteins are composed of C,H,O and amino group and carboxyl group
@@ -157,13 +162,13 @@ All composed of C,H,O,N,P
 	3. Enzymes are also proteins
 	4. Long chains of amino acids are called polypeptides
 	5. Contains phosphorus (P) 
-		
+	
 - **Testing for biomolecules**
 
 	1. Testing for **reduced sugar**
 		- Testing for reduced sugar uses benedict's solution
 		- Benedicts solution turns from blue to red when testing for reducing sugar
-		- Chanfe of color of Benedict solution: Blue -> green -> yellow -> orange -> red
+		- Change of color of Benedict solution: Blue -> green -> yellow -> orange -> red
 	2. Testing for **starch**
 		- Testing for starch uses iodine solution
 		- If starch is present, the solution turns dark blue, otherwise it remains orange-brown
@@ -183,25 +188,9 @@ The shape of enzyme fits the reactant, since it have to fit the reactant, it has
 	
 - **Optimum temperature for enzyme activity:**
 
+<img src="https://kognity-prod.imgix.net/media/edusys_2/content_uploads/aw-05_aw12.15b9eda331a06af02c83.png?w=1000&auto=compress">
+	
 
-
-
-
-
-
-
-	<img src="https://kognity-prod.imgix.net/media/edusys_2/content_uploads/aw-05_aw12.15b9eda331a06af02c83.png?w=1000&auto=compress">
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 - **Optimum pH level for enzymes is another story**
 
 	Its different for every enzymes
@@ -236,7 +225,7 @@ The shape of enzyme fits the reactant, since it have to fit the reactant, it has
 		- Xylem: Carries water from roots to the leaves
 		- Phloem: Carries sucrose away from the leaf
 		- Vascular bundles: Contains xylem and phloem cells, located within the spongy mesophyll
-		
+	
 - **The roles and importance of minerals**
 	- **Nitrate** and **Magnesium** ions are absorbed into the plants from the soil
 		- Nitrates contains nitrogen, essential for composing amino acids, and producing proteins, which is vital for plants
@@ -279,66 +268,45 @@ Root hair cells have large surface area to take in water and minerals from soil
 
 - **Cardiovascular system**
 
-	- Three types of blood vessels
-		- Artery: carries oxygenated blood
-		- Vein: carries deoxygenated blood
-		- Capillary: small vessels delivering blood to body tissues
-		- Artery vs Vein
-			- Artery have thick and smooth wall, blood pressure in artery is higher than pressure in vein
-			- Vein's wall are thinner than artery, wall of vein are made of single layer of cells
-	- The *"Pump"*: Heart
-	
-	- **Double circulatory system**
-		- Mammals have double circulatory system, it contains both **pulmonary circulation** and **systemic circulation**
-			- Pulmonary circulation:
-				- Between heart and lungs
-				- Pulmonary arteries carries deoxygenated blood from heart to lungs
-				- Pulmonary vein carries oxygenated blood from lungs to heart
-			- Systemic circulation
-				- Between heart and the whole body
-				- Systemic arteries carries oxygenated blood to the rest of the body
-				- Systemic veins carries deoxygenated blood from the rest of the body to heart
-	- The structure of heart
+  - Three types of blood vessels
+  	- Artery: carries oxygenated blood
+  	- Vein: carries deoxygenated blood
+  	- Capillary: small vessels delivering blood to body tissues
+  	- Artery vs Vein
+  		- Artery have thick and smooth wall, blood pressure in artery is higher than pressure in vein
+  		- Vein's wall are thinner than artery, wall of vein are made of single layer of cells
+  - The *"Pump"*: Heart
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		<img src="https://kognity-prod.imgix.net/media/edusys_143/content_uploads/aw09_aw06.f6230069d543acd0a5ea.png?w=800&auto=compress">
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	- Other vessels:
-		- Vena cava lets the deoxygenated blood flow back to heart
-		- Aorta takes oxygenated from the heart to arteries
-		- Renal artery is the blood supply from heart to kidney
-		- Renal vein takes blood from the kidney to vena cava, then returned to heart
-		- Arteriole is the small arteries that branches off from artery to capillary
-		- Venule takes deoxygenated blood from the capillaries to back to vein
-	- **Coronary artery disease**
-		- Coronary artery are vessels that supplies the **Cardiac muscle**, its thin and easy to be clotted by fats, coronary disease is caused by this, it could lead to heart attack, high animal fat consumption and high salt consumption could lead to coronary heart disease, also, cigarettes could increase the chance of getting coronary heard disease, since a major ingredient for cigarette is nicotine, it could damage the circulatory system, eventually leading to coronary heart disease
-	- Transport in blood
-		- What's in the blood?
-			- Blood are made of blood cells and plasma, for cells, there is red blood cells and white blood cells, and platelets, red blood cells are responsible for oxygen transport, and white blood cells are part of the immune system, platelets are important because it turns blood into clots when there is bleeding (once come in contact with air), plasma is mostly water, nutrients and hormones, and carbon dioxide are dissolved in it
-			
+  - **Double circulatory system**
+  	- Mammals have double circulatory system, it contains both **pulmonary circulation** and **systemic circulation**
+  		- Pulmonary circulation:
+  			- Between heart and lungs
+  			- Pulmonary arteries carries deoxygenated blood from heart to lungs
+  			- Pulmonary vein carries oxygenated blood from lungs to heart
+  		- Systemic circulation
+  			- Between heart and the whole body
+  			- Systemic arteries carries oxygenated blood to the rest of the body
+  			- Systemic veins carries deoxygenated blood from the rest of the body to heart
+  - The structure of heart
+
+  <img src="https://kognity-prod.imgix.net/media/edusys_143/content_uploads/aw09_aw06.f6230069d543acd0a5ea.png?w=800&auto=compress">
+
+
+  - Other vessels:
+  	- Vena cava lets the deoxygenated blood flow back to heart
+  	- Aorta takes oxygenated from the heart to arteries
+  	- Renal artery is the blood supply from heart to kidney
+  	- Renal vein takes blood from the kidney to vena cava, then returned to heart
+  	- Arteriole is the small arteries that branches off from artery to capillary
+  	- Venule takes deoxygenated blood from the capillaries to back to vein
+  - **Coronary artery disease**
+  	- Coronary artery are vessels that supplies the **Cardiac muscle**, its thin and easy to be clotted by fats, coronary disease is caused by this, it could lead to heart attack, high animal fat consumption and high salt consumption could lead to coronary heart disease, also, cigarettes could increase the chance of getting coronary heard disease, since a major ingredient for cigarette is nicotine, it could damage the circulatory system, eventually leading to coronary heart disease
+  - Transport in blood
+  	- What's in the blood?
+  		- Blood are made of blood cells and plasma, for cells, there is red blood cells and white blood cells, and platelets, red blood cells are responsible for oxygen transport, and white blood cells are part of the immune system, platelets are important because it turns blood into clots when there is bleeding (once come in contact with air), plasma is mostly water, nutrients and hormones, and carbon dioxide are dissolved in it
+
 <h2 id="B8">B8 Gas Exchange and respiration</h2>
-	
+
 - **Gas in lungs**
 	- Gas goes into mouth or nostril into larynx, and trachea, then bronchi, and bronchioles into alveoli, then diffuses into capillaries
 	- Contraction of diaphragm enlarges lungs and negative pressure in lung pushes air in, then diaphragm is relaxed, lungs are shrunk, pushing air out
@@ -384,7 +352,7 @@ Diseases in respiratory system
 	- Lens: a jelly like structure to refract entering light onto the retina
 	- Suspensory ligament: holds the lens in place and stretch it
 	- Cornea: the white, rigid part of the eye, provides physical protection
-	- Optical nerve: the nerve that carries elecric impulse signals toward the brain
+	- Optical nerve: the nerve that carries electric impulse signals toward the brain
 	- Blind spot: part of the retina in front of the optical nerve that is lacking receptors
 	
 <h2 id="B10">B10 Reproduction</h2>
@@ -398,14 +366,14 @@ Diseases in respiratory system
 		- Used for Repair, Growth and asexual reproduction
 		- Meiosis does have genetic variation
 		- Meiosis produce **four** daughter cells at a time
-		
+	
 - **Asexual reproduction**
 	- Advantages of asexual reproduction
 		- Fast
 		- Only one parent is required
 	- Disadvantages of asexual reproduction
 		- Less genetical variation (vulnerable to diseases)
-		
+	
 - **Sexual reproduction**
 	
 	- Advantages of sexual reproduction
@@ -521,14 +489,17 @@ Diseases in respiratory system
 	- Genotypes
 		- When two sex cells combine, the chromosome are taken within a pair in two cells and combined like this:  
 		 	
-			   		 | X  | x
-				----|----|----
-			  **X** | XX | Xx
-			  **x** | Xx | xx
+			   |       | X    | x    |
+			| ----- | ---- | ---- |
+			| **X** | XX   | Xx   |
+			| **x** | Xx   | xx   |
 
 		- Dominant genotype: Capitalized letters, if one dominant genotype exists, the gene would result just as that genotype
+		
 		- Recessive genotype: small letters, only result as a valid genotype if two of the chromosome are both recessive
+		
 		- Homozygous: contain either both dominant or both recessive
+		
 		- Heterozygous: contain both dominant and recessive
 	- Phenotypes
 		- The physical representation of genes
@@ -536,6 +507,7 @@ Diseases in respiratory system
 			- Skin color
 			- …
 	- **Mutation**
+		
 		- Sudden change in genes caused by external factors
 
 <h2 id="B12">B12 Organisms and their environments</h2>
@@ -554,7 +526,7 @@ Diseases in respiratory system
 	- All those groups mentioned above are called trophic levels
 	- Trophic level increases as it flows up the food chain
 	- A food chain must include a producer
-	- The transformation of energy is not total, as the energy flows up the food chain, it only keep 90% of the total amount of energy going up each level
+	- The transformation of energy is not total, as the energy flows up the food chain, it only keep **90%** of the total amount of energy going up each level
 
 <h2 id="B13">B13 Human influences on the ecosystem</h2>
 
@@ -617,16 +589,39 @@ Water pollution
 <h2 id="C4">C4 Stoichiometry</h2>
 
 **For Stoichiometry there is only these things to memorize:** 
- 
+
 1. ***The Avogadro constant***  
 
-	> ***6.02 × 10^(23)***
-	- The amount of particle/atoms in 12g of carbon-12
-	1 mole of substance = (The Avogadro constant) 6.02 × 10^(23) molecules of substance
-	- Relative atomic/molecular mass/mass number in grams = mass of one mole of substance
-2. ***Molar gas volume***
-	- Under same temperature and pressure, the same volume of gas could contain a equal number of molecules, no matter what the gas is
-	- Number of moles = gas volume / 24
+  > ***6.02 × 10^23^***
+  - The amount of particle/atoms in 12g of carbon-12
+  **1 mole of substance = (The Avogadro constant) 6.02 × 10^23^ molecules of substance**
+  - (Relative atomic/molecular mass/mass number) in grams = mass of one mole of substance
+
+2. ***Relative molecular mass***
+
+   - The sum of the mass number of all atoms within a molecule
+
+
+3. ***Molar gas volume***
+
+  - Under same temperature and pressure, the same volume of gas could contain a equal number of molecules, no matter what the gas is
+  - Number of moles = gas volume / 24
+
+4. **Formula** (Simple AF)
+
+   - Number of moles = ~a~M
+
+   - Relative atomic / molecular mass = ~R~M
+
+   - Total Substance Mass = M
+     $$
+     \begin{align*}
+     	_{a}M = \frac{M} {_{r}M}
+     \end{align*}
+     $$
+     
+
+     
 
 <h2 id="C5">C5 Electricity and chemistry</h2>
 
@@ -696,39 +691,48 @@ Redox reactions
 	- ***Acids are proton (hydrogen ion) donor, and bases are proton(hydrogen ion) acceptor***
 		- Acid give out hydrogen ions in reactions
 		- Base takes hydrogen ions in reactions
+	
 - **pH level**
 	- pH level: A property of substances that is represented by integers 0-14
+	
 	- Lower the pH level, more acidic a substance is
+	
 	- Higher the pH level, more basic it is
+	
 	- Alkaline
-		- If a base dissolves in water, then its alkaline
+	
+	- If a base dissolves in water, then its alkaline
 		- Alkaline is a category of base substances
 		- Therefore, a alkaline is always base, a base could be alkaline
-Indicators
+	Indicators
+		
 	- pH levels could be tested with different indicators
 	
-		                             | indication of acid                  | Indicaiton of base                   |
-		-----------------------------|-------------------------------------|--------------------------------------|
-		**Litmus**                   |red                                  |blue                                  |
-		**Methyl Orange**            |red                                  |yellow                                |
-		**Universal Indicator Paper**|***strong:*** red, ***weak:*** yellow|***strong:*** purple, ***weak:*** blue|						
-		**Phenolphthalein**          |colorless                            |pink                                  |
-		
+		             |                               | indication of acid                    | Indication of base                     |
+		| ----------------------------- | ------------------------------------- | -------------------------------------- |
+		| **Litmus**                    | red                                   | blue                                   |
+		| **Methyl Orange**             | red                                   | yellow                                 |
+		| **Universal Indicator Paper** | ***strong:*** red, ***weak:*** yellow | ***strong:*** purple, ***weak:*** blue |
+		| **Phenolphthalein**           | colorless                             | pink                                   |
+	
 - **Reaction of acid and bases**
+	
 	- Salt: ionic compounds made of positive ion and negative ions (???)
-	- Acid + metal -> salt + hydrogen
+	- Acid + metal &rarr; salt + hydrogen
 	- Acid + metal oxide(base) -> salt + water (neutralization: two chemical opposite, acid and base reacts together to form products with neutral pH level)
-	- Acid + metal hydroxide(base) -> salt + water (neutralization)
-	- Acid + ammonia solution(base) -> salt + water (neutralization)
-	- Acid + Metal carbonate -> salt + carbon dioxide + water
+	- Acid + metal hydroxide(base) &rarr; salt + water (neutralization)
+	- Acid + ammonia solution(base) &rarr; salt + water (neutralization)
+	- Acid + Metal carbonate &rarr; salt + carbon dioxide + water
 	
 - **Types of oxides**
-	- Basic oxides/metallic oxides, oxides with metal, and are basic, duh (CaO, MgO)
+	- Basic oxides / metallic oxides, oxides with metal, and are basic, duh (CaO, MgO)
 	- Acidic oxides, oxides with non-metal, and are acidic (SO2)
 	- Neutral oxides (Carbon monoxides, dinitrogen oxide, nitrous oxide, nitrogen monoxide)
 	- Amphoteric oxide, oxides that could act as both acid and base
+	
 - **Preparation of salts**
-	- General Procedure/method
+	
+	- General Procedure / method
 		1. Warm the acid to speed the reaction
 		2. Add metal, metal oxide or metal carbonate in while stirring the acid
 		3. Filter the mixture to remove extra solid materials
@@ -736,11 +740,35 @@ Indicators
 		5. Cool it down
 		6. Filter to retrieve the crystals from the liquid
 		7. And there is your salts.
-- **Identifications of ions and gases**
 	
+- **Identifications of ions and gases**
+
+  - Testing for aqueous cations
+
+    | Cation             | Effect of a.q. Sodium Hydroxide                              | Effect of a.q. Ammonia                                       |
+    | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+    | Ammonium, NH~4~^+^ | Ammonia gas is produced when heated; turns from red to litmus to blue | -----                                                        |
+  | Calcium, Ca^2+^    | While precipitation is formed, insoluble                     | No precipitation                                             |
+    | Copper(II), Cu^2+^ | Light blue precipitation, insoluble                          | Light blue precipitation, soluble                            |
+  | Iron(II), Fe^2+^   | Green precipitation, insoluble                               | Green precipitation, insoluble                               |
+    | Iron(III), Fe^3+^  | Red-brown precipitation, insoluble                           | Red-brown precipitation, insoluble                           |
+  | Zinc(II), Zn^2+^   | White precipitation, soluble, dissolving yields a colorless solution | White precipitation, soluble, dissolving yields a colorless solution |
+  
+    
+  
+  - Flame tests for cations
+  
+    | Metal Ions         | Color When burnt    |
+  | ------------------ | ------------------- |
+    | Lithium, Li^+^     | Red                 |
+    | Sodium, Na^+^      | Yellow              |
+    | Potassium, K^+^    | Lilac, Light Purple |
+    | Copper(II), Cu^2+^ | Blue-Green          |
+  
+    
 
 <h2 id="C14">C14 Organic Chemistry</h2>
-	
+
 - **Names of compounds**
 	- **Alkane**
 		- Alkane features a single bond between carbons
@@ -753,23 +781,25 @@ Indicators
 		- Since it needs to have a double bond between carbons, there is no "methene" (one carbon alkene)
 		- Functional group is still Carbon
 		- Alkene is not saturated because of the double bond
+		
 	- **Alcohol**
+		
 		- Alcohol features single bonds between carbons, but have one OH as a functional group
 		
 	- Prefixes (you only need to memorize the first four actually)
 	
-		Prefix | Number of carbons 
-		-------|------------------	
-		Meth-  | 1
-		Eth-   | 2 
-		Prop-  | 3
-		But-   | 4
-		Penta- | 5
-		Hex-   | 6
-		Hept-  | 7
-		Octa-  | 8 
-		Dec-   | 9
-		Dodec- | 10
+		| Prefix | Number of carbons |
+		| ------ | ----------------- |
+		| Meth-  | 1                 |
+		| Eth-   | 2                 |
+		| Prop-  | 3                 |
+		| But-   | 4                 |
+		| Penta- | 5                 |
+		| Hex-   | 6                 |
+		| Hept-  | 7                 |
+		| Octa-  | 8                 |
+		| Dec-   | 9                 |
+		| Dodec- | 10                |
 	
 - **Fuel**
 	- Types of fuels
@@ -777,7 +807,7 @@ Indicators
 		- Natural gas
 			- Natural gas is mainly methane
 			- Equation for the combustion of Natural Gas:
-				- Methane + Oxygen -> Carbon Dioxide + Water
+				- Methane + Oxygen &rarr; Carbon Dioxide + Water
 		- Petroleum
 			- Fractional Distillation
 				> Petroleum, crude oil, consists of different compounds, organic compound-Hydrocarbon, 30% of alkanes, with the remainder of other compounds, this mixture of all those compounds altogether could not be effectively utilized, therefore a separation technique that will separate the crude oil into pure substances, called Fractional Distillation is invented
@@ -795,12 +825,12 @@ Indicators
 					- 40C - 100C Petrol (gasoline)
 					- <40C Gas 
 	
-
 - **Homologous series**
 	- Homologous series is a series of compound that have similar chemical properties but each differs from each other from addition of more functional groups.
-	- General formula of a typical homologous series: **Alkanes:**  C^(n)H^(2n)+2
+	- General formula of a typical homologous series: **Alkanes:**  C~n~H~2n+2~
 
 - **Alkanes**
+	
 	- Alkane is a common hydrocarbon, the chain length differs its usage, its mainly used for fuels
 	- Trend of properties in the series
 		- Going up the series (Meth-Eth-Pro)
@@ -808,7 +838,8 @@ Indicators
 			- Boiling point+, since the molecular mass is higher going up the series
 			- Physical state: From gas to liquid cuz duh
 	- Alkanes is strong since its mainly composed of C-H covalent bonds, but it still undergoes combustion
-		> Methane + 2O^2 -> CO^2 + 2H^(2)O (exothermic)
+		
+		> Methane + 2O~2~ &rarr; CO~2~ + 2H~2~O (exothermic)
 	- Again, bonds are strong in alkanes compounds, meaning this type on compound is saturated, Each molecules are bond by single bonds
 - **Cracking**
 	- Heating Ethane would break Ethane down to Ethene and Hydrogen
@@ -816,20 +847,24 @@ Indicators
 	- Heating to high temperatures are often expensive, therefore an alternative approach is Catalytic cracking, instead of heating Ethane to 800C, adding aluminum as a catalyst could allow cracking at only 500C
 	- Heating cracking and Catalytic cracking are used for different scenarios, Heating cracking are often used in long chains of alkanes
 - Saturation
+	
 	- Alkenes are unsaturated because of the double bond, its likely to react with halogens, we could utilize this property to test for test for the existence of alkene, when alkene is reacted with Bromide(common halogen), it turns from a brown solution to colorless solution
 - **Alcohol**
+	
 	- Fermentation
 		- Fermentation is the process of making alcohol by breaking down glucose with yeast
-			> Glucose -> ethanol + carbon dioxide
+			
+			> Glucose &rarr; ethanol + carbon dioxide
 	- Hydration of ethene
-		- C^(2)H^(4) +  H^(2)O -> C^(2)H^(5)OH
-		- Ethene + water -> Ethanol
+		- C~2~H~4~ +  H~2~O &rarr; C~2~H~5~OH
+		- Ethene + water &rarr; Ethanol
 	- Properties of ethanol
+		
 		- Ethanol is small and light molecules that’s liquid at room temp. easy to evaporate and highly flammable and ignited at temperature lower than room temp. combusts with oxygen
 	- Use of ethanol
 		- Ethanol is only toxic at large scale consumption, and its highly volatility, therefore its used as solvents for cosmetics and perfumes
 		- Ethanol could also be used as fuels, leftover crops could be processed to produce ethanol
-		
+	
 - **Polymers**
 	- Single unit of substance = monomer
 	- Multiple units joined together = polymer
@@ -852,12 +887,16 @@ Indicators
 		- Transverse - up and down
 		- Longitudinal - back and forth
 	- Wavelength
+		
 		- the distance between two crests or two trough or any two equally spaced points on two cycles of wave
 	- Frequency
+		
 		- number of complete wave pass one point each second = numbers of waves / time
 	- Wave speed
+		
 		- wavelength * frequency
 	- Reflection of wave
+		
 		- angle of incidence = angle of reflection
 	- Refractive index
 		- When a wave enters a denser medium it slows down, and the wave is diverted towards the normal
@@ -867,9 +906,26 @@ Indicators
 			- Also, Refractive index = sin(angle of incidence) / sin(angle of refraction)
 		- Total internal reflection
 			- Critical angle
+				
 				- If the angle of incidence is larger than the critical angle, then the light penetrates the surface it hits on, otherwise its completely reflected
-				- Refractive index = 1 / sin(critical angle)
-				- Sin(Critical angle) = 1 / refractive index
+				
+			- Formulas
+				
+				- R = Refractive Index
+				
+				- C = Critical Angle
+				
+				$$
+				\begin{align*}
+				R = \frac{1} {\sin(C)} \\
+				\end{align*}
+				$$
+				
+				$$
+				\begin{align*}
+				C = \arcsin(\frac{1} {R})
+				\end{align*}
+				$$
 		- Ray graphing
 			- Optical axis
 				- The line on the graph that represents the path of a ray
@@ -878,10 +934,10 @@ Indicators
 			- Focal length
 				- The distance of the center of the lens to the principal focus point
 - **EM Waves**
-	- Order of spectrum (LONG WAVELENGTH -> SHORT WAVELENGTH)
-		- Radiowaves
+	- Order of spectrum (Long Wave len. &rarr; Short Wave len.)
+		- Radiowave
 			- Can be send over great distance
-			- Refracted back on the top of the atmosphere so it actually travels tru the curvature of the earth
+			- Refracted back on the top of the atmosphere so it actually travels thru the curvature of the earth
 		- Microwave
 			- Are absorbed by materials within foods and organisms, creating a heating effect
 		- Infra-red
@@ -901,7 +957,7 @@ Indicators
 	- Faster vibration = increased frequency = increased pitch
 	- Larger vibration = increased amplitude = increased loudness
 
-***	
+***
 
 ######IGCSE is a trademark of Cambridge Education, This site is not part of Cambridge Education, nor is this site associated with Cambridge Education.
 ######This site is for educational purposes only.
