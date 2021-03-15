@@ -60,7 +60,11 @@
 
     a:hover {
       color: mediumaquamarine;
-      text-shadow: 0px 0px 5px mediumaquamarine;
+    }
+    @media (prefers-color-scheme: dark) {
+      a:hover {
+        text-shadow: 0px 0px 5px mediumaquamarine;
+      }
     }
 
     a.absent {
