@@ -15,20 +15,30 @@
       overscroll-behavior: none;
     }
 
-    body {
-      font-family: Helvetica, arial, sans-serif;
-      font-size: 14px;
-      line-height: 1.6;
-      background-color: white;
-      padding: 0px;
-      width: 100%;
-      margin: 0 auto;
-      overscroll-behavior: none;
+    @media (prefers-color-scheme: light) 
+    {
+      body {
+        font-family: Helvetica, arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        background-color: white;
+        padding: 0px;
+        width: 100%;
+        margin: 0 auto;
+        overscroll-behavior: none;
+      }
     }
 
     @media (prefers-color-scheme: dark) 
     {
       body {
+        font-family: Helvetica, arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 0px;
+        width: 100%;
+        margin: 0 auto;
+        overscroll-behavior: none;
         background-color: rgb(19, 19, 19);
         color:white;
       }
@@ -43,17 +53,18 @@
     }
 
     a {
-      color: #4183C4;
+      color: #284c70;
       text-decoration-line: none;
-      transition-duration: 0.2s;
+      transition-duration: 0.5s;
     }
 
     a:hover {
       color: mediumaquamarine;
+      text-shadow: 0px 0px 5px mediumaquamarine;
     }
 
     a.absent {
-      color: #cc0000;
+      color: #464646;
     }
 
     a.anchor {
@@ -164,6 +175,7 @@
         -webkit-background-clip: text;
         text-shadow: 1px 1px 10px #1b9bca;
       }
+    }
     h3 {
       font-size: 18px;
     }
@@ -517,7 +529,7 @@
 
     @media not -webkit-device-pixel-ratio {
       .Master-title {
-        font-size: 60px;
+        font-size: 40px;
         color: lightgray;
       }
     }
@@ -528,6 +540,11 @@
         color: transparent;
         background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #1b9bca 100%);
         -webkit-background-clip: text;
+      }
+    }
+    @media screen and (min-width: 914px) {
+      .Master-title {
+        font-size: 60px;
       }
     }
 
@@ -561,6 +578,7 @@
     }
 
     @media screen and (min-width: 914px) {
+
 
       #Content {
         width: 825px;
@@ -763,16 +781,16 @@
 
           <div>
             <pre style="z-index: 2;"><code class="language-none">Estimated reading time: 20 minutes
-    pls shut up grammar police
+pls shut up grammar police
 
-    2020/3/12:
-    Initial commit
+2020/3/12:
+Initial commit
 
-    Changelog 2021/3/14:
-    + chemistry units completed
-    + new style
-    . things are still kinda lack of polish
-    . will make a glossary checklist to make the revision process even simpler?
+Changelog 2021/3/14:
++ chemistry units completed
++ new style
+. things are still kinda lack of polish
+. will make a glossary checklist to make the revision process even simpler?
     </code></pre>
           </div>
 
@@ -2486,10 +2504,59 @@
 
     <h2 id="C10">C10 Metals</h2>
     <ul>
-      <li>
-
+      <li><strong>Reactivity series(strong to weak)</strong>
+        <ul>
+          <li>Potassium</li>
+          <li>Sodium</li>
+          <li>Calcium</li>
+          <li>Magnesium</li>
+          <li>Aluminium</li>
+          <li><strong>Carbon</strong></li>
+          <li>Zinc</li>
+          <li>Iron</li>
+          <li><strong>Hydrogen</strong></li>
+          <li>Copper</li>
+        </ul>
       </li>
+      <li><strong>Extraction of Metals</strong>
+        <ul>
+          <li>Types of iron ores
+              <ul>
+                <li>Hematite (Fe<sub>2</sub>O<sub>3</sub>)</li>
+                <li>Magnetite (Fe<sub>3</sub>O<sub>4</sub>)</li>
+              </ul>
+          </li>
+          <li>Concentration of the ore: process of extraction of impurities from the ores</li>
+          <li>Extraction process
+            <ol>
+              <li>Reduction of iron oxide
+                 <ul>
+                  <li>Iron is put into blast furnace, coke(limestone) is added</li>
+                  <li>Carbon in coke reacts with oxygen in the air to produce carbon monoxide</li>
+                  <li>The combustion in furnace produced enough energy for carbon monoxide(look at reactivity series) in the coke to displace oxygen in the ore, pure iron and carbon dioxide is produced</li>
+                  <p>\[<br>
+                    \begin{align*}<br>
+                    Fe_2O_3 + 3CO &rarr; 2Fe + 3CO_2 \\<br>
+                    \end{align*}<br>
+                  \]</p>
+                 </ul>
+              </li>
+             <li>Extraction of sand(silica)
+               <ul>
+                 <li>Limestone(CaCO<sub>3</sub>) is added, and is decomposed to lime (CaO)(草)</li>
+                 <li>CaO reacts with silica(SiO<sub>2</sub>)</li>
+                 <p>\[<br>
+                  \begin{align*}<br>
+                  CaO + SiO_2 &rarr; CaSiO_3(Slag) \\<br>
+                  \end{align*}<br>
+                \]</p>
+               </ul>
 
+             </li>
+            </ol>
+          </li>
+        </ul>
+      </li>
     </ul>
 
     <h2 id="C11">C11 Air and water</h2>
