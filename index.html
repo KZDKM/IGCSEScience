@@ -578,8 +578,8 @@
 
     #Header-background-filter {
       width: 100%;
-      backdrop-filter: brightness(50%) blur(3px);
-      -webkit-backdrop-filter: brightness(50%) blur(3px);
+      backdrop-filter: brightness(50%) blur(2px);
+      -webkit-backdrop-filter: brightness(50%) blur(2px);
     }
 
     @media screen and (min-width: 914px) {
@@ -841,9 +841,9 @@ Changelog 2021/3/14:
 
     <blockquote>
       <ul>
-        <li><a href="#C1">C1 The particulate nature of matter</a></li>
+        <li><a><del>C1 The particulate nature of matter</del></a></li>
         <li><a href="#C2">C2 Experimental techniques</a></li>
-        <li><a href="#C3">C3 Atoms, elements and compounds</a></li>
+        <li><a><del>C3 Atoms, elements and compounds</del></a></li>
         <li><a href="#C4">C4 Stoichiometry</a></li>
         <li><a href="#C5">C5 Electricity and chemistry</a></li>
         <li><a href="#C6">C6 Energy changes in chemical reactions</a></li>
@@ -866,10 +866,10 @@ Changelog 2021/3/14:
         <li> <a href="#P2">P2 Work, energy and power</a></li>
         <li> <a href="#P3">P3 Thermal Physics</a></li>
         <li> <a href="#P4">P4 Properties of waves, including light and sound</a></li>
-        <li> <a href="#P5">P5 Electricity and magnetism</a></li>
-        <li> <a href="#P6">P6 Electric circuits</a></li>
-        <li><a href="#P7"> P7 Electromagnetic effects</a></li>
-        <li> <a href="#P8">P8 Atomic physics</a></li>
+        <li> <a href="#P5">P5 Electricity and magnetism (WIP)</a></li>
+        <li> <a href="#P6">P6 Electric circuits (WIP)</a></li>
+        <li> <a href="#P7">P7 Electromagnetic effects (WIP)</a></li>
+        <li> <a href="#P8">P8 Atomic physics (WIP)</a></li>
       </ul>
     </blockquote>
 
@@ -921,11 +921,14 @@ Changelog 2021/3/14:
               <li>Endoplasmic reticulum - for transports, like diffusion, osmosis, and the synthesis of lipids </li>
               <li>Golgi body - packing and sending macromolecules outside of the cell</li>
               <li>Mitochondria - supply and storage of energy for the cell</li>
-              <li>Ribosomes - site of protein synthesis
-                Plant cells exclusive organs</li>
-              <li>Cell wall</li>
-              <li>Central vacuole</li>
-              <li>Chloroplasts</li>
+              <li>Ribosomes - site of protein synthesis</li>
+              <li>Plant cells exclusive organs
+                <ul>
+                  <li>Cell wall</li>
+                  <li>Central vacuole</li>
+                  <li>Chloroplasts</li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li>Specialized cells
@@ -934,17 +937,26 @@ Changelog 2021/3/14:
               <li>Root hair cell (absorbing water and nutrients from the ground)</li>
               <li>Palisade mesophyll (photosynthesis)</li>
               <li>Red blood cell</li>
-              <li>Egg, sperm
-                Magnification</li>
-              <li>Magnification = Size of magnified image/Size of actual image</li>
+              <li>Egg, sperm</li>
             </ul>
+          </li>
+
+          <li>Magnification
+            <blockquote>M = Magnification, mI = size of magnified image, aI = size of actual image</blockquote>
+            <p><br>
+              \[<br>
+              \begin{align*}<br>
+              M = \frac{mI} {aI}<br>
+              \end{align*}<br>
+              \]</p>
+
           </li>
         </ul>
       </li>
       <li><strong>Movement in and out of the cell</strong><br>
         Diffusion: movement of particles from higher concentration (area with more particles) to lower concentration
-        (area with less particles)
-        Osmosis: diffusion of water molecules</li>
+        (area with less particles)</li>
+      <li>Osmosis: diffusion of water molecules</li>
     </ol>
 
     <h2 id="B3">B3 Biomolecules</h2>
@@ -1040,7 +1052,7 @@ Changelog 2021/3/14:
 
             <ul>
               <li>Testing for fats and oils uses ethanol</li>
-              <li>Turns transparent when fat or oil is present, otherwise remain transparent</li>
+              <li>Turns cloudy when fat or oil is present, otherwise remain transparent</li>
             </ul>
           </li>
           <li>Testing for <strong>protein</strong>
@@ -1256,19 +1268,25 @@ Changelog 2021/3/14:
             width="400px"></p>
 
         <ul>
-          <li>Other vessels:</li>
-          <li>Vena cava lets the deoxygenated blood flow back to heart</li>
-          <li>Aorta takes oxygenated from the heart to arteries</li>
-          <li>Renal artery is the blood supply from heart to kidney</li>
-          <li>Renal vein takes blood from the kidney to vena cava, then returned to heart</li>
-          <li>Arteriole is the small arteries that branches off from artery to capillary</li>
-          <li>Venule takes deoxygenated blood from the capillaries to back to vein</li>
-          <li><strong>Coronary artery disease</strong></li>
-          <li>Coronary artery are vessels that supplies the <strong>Cardiac muscle</strong>, its thin and easy to be
-            clotted by fats, coronary disease is caused by this, it could lead to heart attack, high animal fat
-            consumption and high salt consumption could lead to coronary heart disease, also, cigarettes could increase
-            the chance of getting coronary heard disease, since a major ingredient for cigarette is nicotine, it could
-            damage the circulatory system, eventually leading to coronary heart disease</li>
+          <li>Other vessels:
+            <ul>
+              <li>Vena cava lets the deoxygenated blood flow back to heart</li>
+              <li>Aorta takes oxygenated from the heart to arteries</li>
+              <li>Renal artery is the blood supply from heart to kidney</li>
+              <li>Renal vein takes blood from the kidney to vena cava, then returned to heart</li>
+              <li>Arteriole is the small arteries that branches off from artery to capillary</li>
+              <li>Venule takes deoxygenated blood from the capillaries to back to vein</li>
+            </ul>
+          </li>
+          <li><strong>Coronary artery disease</strong>
+            <ul>
+              <li>Coronary artery are vessels that supplies the <strong>Cardiac muscle</strong>, its thin and easy to be
+                clotted by fats, coronary disease is caused by this, it could lead to heart attack, high animal fat
+                consumption and high salt consumption could lead to coronary heart disease, also, cigarettes could increase
+                the chance of getting coronary heard disease, since a major ingredient for cigarette is nicotine, it could
+                damage the circulatory system, eventually leading to coronary heart disease</li>
+            </ul>
+          </li>
           <li>Transport in blood</li>
           <li>What&#39;s in the blood?
 
@@ -1742,7 +1760,7 @@ Changelog 2021/3/14:
 
             <ul>
               <li>
-                <p>When two sex cells combine, the chromosome are taken within a pair in two cells and combined like
+                <p>When two sex cells combine, the <strong>alleles</strong> with in chromosome are taken within a pair in two cells and combined like
                   this: </p>
 
                 <table>
@@ -1769,11 +1787,11 @@ Changelog 2021/3/14:
                 </table>
               </li>
               <li>
-                <p>Dominant genotype: Capitalized letters, if one dominant genotype exists, the gene would result just
-                  as that genotype</p>
+                <p>Dominant allele: Capitalized letters, if one dominant genotype exists, the gene would result just
+                  as that allele</p>
               </li>
               <li>
-                <p>Recessive genotype: small letters, only result as a valid genotype if two of the chromosome are both
+                <p>Recessive allele: small letters, only result as a valid genotype if two of the allele are both
                   recessive</p>
               </li>
               <li>
@@ -3020,6 +3038,308 @@ Changelog 2021/3/14:
                 other molecules</li>
             </ul>
           </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 id="P1">P1 Motion</h2>
+    
+    <ul>
+      <li><strong>Motion</strong>
+        <ul>
+          <li>Speed
+            <ul>
+              <li>Speed represents the rate of movement</li>
+              <li>Presented and calculated as {distance}/{time} (e.g. m/s)</li>
+              <li>A object travels 30m in 10s, then 30(distance) divide by 10(time) = 3m/s (&larr; UNITS NEEDS TO BE CONSTANT!!!)</li>
+              <li>If you require further explination on this while you are revising, you are pretty screwed for the exams tbh</li>
+            </ul>
+          </li>
+          <li>Velocity
+            <ul>
+              <li>Velocity is speed with a specified direction</li>
+            </ul>
+          </li>
+          <li>Acceleration
+            <ul>
+              <li>Acceleration is the rate of change in speed</li>
+              <li>Presented as "meter per second" per second (m/s<sup>2</sup> or m/s/s)</li>
+              <li>(Change in) meter per second (&larr;speed) per second (&larr;rate of change in speed)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Physical properties of things</strong>
+        <ul>
+          <li>Mass
+            <ul>
+              <li>Mass is the representation of "How much"</li>
+              <li>Mass remains constant as long as the matter itself is'nt altered</li>
+              <li>Common unit of mass would be grams(g) kilograms(kg)...</li>
+            </ul>
+          </li>
+          <li>Weight
+            <ul>
+              <li>Weight refers to the amount of gravitational pull on a matter</li>
+              <li>Since the gravitational pull is a variable external factor(on earth or on moon, etc.), weight is'nt constant</li>
+              <li>Weight does have a relationship with mass</li>
+              <li>Weight is a <em>force</em> therefore its unit is Newton (N)</li>
+              <strong>Calculation of weight:</strong>
+              <li>W = Weight(N)</li>
+              <li>M = Mass(kg)</li>
+              <li>G = Gravitational force(N/kg)</li>
+              <p>\[<br>
+                \begin{align*}<br>
+                W = M \times G \\<br>
+                \end{align*}<br>
+                \]</p>
+              
+            </ul>
+          </li>
+          <li>Density
+            <ul>
+              <li>Density represents how much matters there is within a certain space/volume</li>
+              <li>You could understand this as how compressed a object is, or how tight the space is in a object</li>
+              <li>1kg of gold and 1kg of silk, same mass, same weight, different volume, different density</li>
+              <strong>Calculation of density:</strong>
+              <li>D = density(kg/m<sup>3</sup>)</li>
+              <li>M = Mass(kg)</li>
+              <li>V = Volume(m<sup>3</sup>)</li>
+              <p>\[<br>
+                \begin{align*}<br>
+                D = \frac{M}{V}\\<br>
+                \end{align*}<br>
+                \]</p>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Forces</strong>
+      <blockquote>May the force (4<sup>th</sup>) be with you (interesing fact: May 4<sup>th</sup> is the due date of our personal project, just sayin :P)</blockquote>
+      <ul>
+        <li>Forse is energy</li>
+        <li>Exertion of force could be on any poin on an object towards any direction</li>
+        <li>The intensity of forces is measured in newtons</li>
+        <li>Balancing force
+          <ul>
+            <li>Forces exerting on the same object could cancel eachother out</li>
+            <li>Balancing forces requires the unity of direction and intensity of force</li>
+            <li>If the intensity of forces in a certain direction is the same comparing to forces on the exact opposite direction, then the force is balanced in that direction</li>
+            <li>If the force is balanced in every direction, no movments is produced by force</li>
+          </ul>
+        </li>
+        <li>Torques
+          <ul>
+            <li>Torque is a turning force</li>
+            <li>Components/variables of Torque
+              <ul>
+                <li>Pivot: center of the spinning movement</li>
+                <li>Distance: distance between the pivot and the point of exertion of force</li>
+              </ul>
+            </li>
+            <li>Larger the distance, larger the touque</li>
+            <strong>Calculation of torque</strong>
+            <li>M = Movement produced by touque(Nm, Newton meters)</li>
+            <li>F = force</li>
+            <li>D = distance(m)</li>
+            <p>\[<br>
+              \begin{align*}<br>
+              M = F \times D \\<br>
+              \end{align*}<br>
+              \]</p>
+          </ul>
+        </li>
+      </ul>
+      </li>
+    </ul>
+
+    <h2 id="P2">P2 Work, energy, and power</h2>
+
+    <ul>
+      <blockquote>Energy could not be produced or destroyed, energy could only be transferred, types of energy is interchangeable 
+        <p><em><strong>- Law of conservation of energy</strong></em></p></blockquote>
+      <li><strong>Types of energy</strong>
+        <ul>
+          <li>Kinetic energy
+            <ul>
+              <li>Energy of movement, stored in objects in motion</li>
+            </ul>
+          </li>
+          <li>Chemical energy
+            <ul>
+              You already have a good understanding of this from the chemistry units:
+              <li>Chemical energy is stored in the bonds between molecules</li>
+            </ul>
+          </li>
+          <li>Potential/Gravitational potential energy
+            <ul>
+              <li>Energy produced by gravitational pull, stored in any objects attracted by gravity</li>
+              <li>If the force of gravity is unbalanced in a object, then this energy would transfer into kinetic energy</li>
+            </ul>
+          </li>
+          <li>Elastic energy
+            <ul>
+              <li>Stored when a object is streched/compressed but not broken or completely deformed</li>
+            </ul>
+          </li>
+          <li>Thermal energy
+            <ul>
+              <li><a href="#P3">P3 Thermal physics</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Energy calculations</strong>
+        <ul>
+          <li>Kinetic energy
+            <ul>
+              <blockquote>
+                K = Kinetic energy
+                M = Mass
+                V = Velocity(m/s)
+              </blockquote>
+              <p>\[<br>
+                \begin{align*}<br>
+                K = M \times D^2 \\<br>
+                \end{align*}<br>
+                \]</p>
+            </ul>
+
+          </li>
+          <li>Gravity Potential energy(G.P.E)
+            <ul>
+              <blockquote>
+                M = Mass(kg)
+                Ga = Gravity acceleration(m/s/s)
+                H = Elevation/Height
+              </blockquote>
+              <p>\[<br>
+                \begin{align*}<br>
+                G.P.E = M \times Ga \times H \\<br>
+                \end{align*}<br>
+                \]</p>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Work</strong>
+        <ul>
+          <li>Work is presented with unit Joules</li>
+          <li>Calculation of work done:
+            <ul>
+              <blockquote>
+                W = Work(Joules)
+                F = Force(N)
+                D = Distance moved(m)
+              </blockquote>
+              <p>\[<br>
+                \begin{align*}<br>
+                W = F \times D \\<br>
+                \end{align*}<br>
+                \]</p>
+              
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Power</strong>
+        <ul>
+          <li>Power is the rate of transfer of energy</li>
+          <li>Calculation of energy:
+            <ul>
+              <blockquote>
+                P = Power
+                E = Energy transferred
+                t = Time
+              </blockquote>
+            </ul>
+            <p>\[<br>
+              \begin{align*}<br>
+              P = \frac{E}{t}\\<br>
+              \end{align*}<br>
+              \]</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 id="P3">P3 Thermal physics</h2>
+
+    <ul>
+      <li><strong>What is heat?</strong>
+        <ul>
+          <li>Heat is the vibration of particles (molecules)</li>
+
+        </ul>
+      </li>
+      <li><strong>State of matters</strong>
+        <ul>
+          <li>State of matter is affected by temperature and matter</li>
+          <li>When thermal energy/temperature is high or pressure is low:
+            <ul>
+              <li>Particles is vibrating fast</li>
+              <li>Distance between particles is large</li>
+              <li>State of matter is gas, Characteristics of gas:
+                <ul>
+                  <li>not dense</li>
+                  <li>particles moving fast</li>
+                  <li>formless</li>
+                  <li>freely flowing</li>
+                  <li>inconsistent volume(could be compressed)</li>
+                </ul>
+            </li>
+            </ul>
+          </li>
+          <li>When thermal energy/temperature is lower or pressure is higher:
+            <ul>
+              <li>Particles is vibrating slower</li>
+              <li>Distance between particles is smaller</li>
+              <li>State of matter is liquid, Characteristics of liquid:
+                <ul>
+                  <li>denser</li>
+                  <li>particles moving slower</li>
+                  <li>formless</li>
+                  <li>freely flowing</li>
+                  <li>consistent volume(could not be compressed)</li>
+                </ul>
+              </li>
+            </ul>
+            </li>
+            <li>When thermal energy/temperature is low or pressure is high:
+              <ul>
+                <li>Particles is vibrating slowest</li>
+                <li>Distance between particles is smallest</li>
+                <li>State of matter is solid, Characteristics of solid:
+                  <ul>
+                    <li>densest</li>
+                    <li>particles moving slowest</li>
+                    <li>formed</li>
+                    <li>consistent volume(could not be compressed)</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+        </ul>
+        <ul>
+          <li><strong>Change of state</strong>
+            <ul>
+              <li>Melting point: temperature needed to change from solid to liquid</li>
+              <li>Boiling point: temperature needed to change from liquid to gas</li>
+              <li>Soild &rarr; Liquid: melting</li>
+              <li>Liquid &rarr; Solid: freezing</li>
+              <li>Liquid &rarr; Gas: boiling</li>
+              <li>Gas &rarr; Liquid: condensing</li>
+              <li>Solid &rarr; Gas: sublimation</li>
+              <li>Gas &rarr; Gas: deposition</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Transformation of thermal energy</strong>
+        <ul>
+          <li>Matters have different conductivity of heat</li>
+          <li>Transformation of heat by solid contacting physically: conduction</li>
+          <li>Transformation of heat by flowing liquid/gas: convection</li>
         </ul>
       </li>
     </ul>
